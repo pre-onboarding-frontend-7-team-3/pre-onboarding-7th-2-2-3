@@ -1,5 +1,5 @@
-import Advertisement from "pages/Advertisement";
-import Home from "pages/Home";
+import Advertisement from "components/pages/Advertisement";
+import Home from "components/pages/Home";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
