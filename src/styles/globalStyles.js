@@ -3,11 +3,12 @@ import { css } from "@emotion/react";
 const globalStyles = css`
   * {
     box-sizing: border-box;
+    font-family: "Roboto";
   }
 
   html,
   body,
-  .app {
+  #root {
     height: 100%;
     overflow: hidden;
     margin: 0;
