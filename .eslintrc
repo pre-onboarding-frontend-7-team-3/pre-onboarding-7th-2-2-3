@@ -1,8 +1,0 @@
-{
-  "extends": ["prettier", "react-app", "eslint:recommended"],
-  "rules": {
-    "no-console": ["error", { "allow": ["error", "log"] }],
-    "curly": "error",
-    "no-unused-vars": "off"
-  }
-}
