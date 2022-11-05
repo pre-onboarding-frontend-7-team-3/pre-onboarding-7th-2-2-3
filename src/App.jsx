@@ -1,12 +1,15 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import CardList from "components/card/CardList";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<CardList />} />
-    </Routes>
+    <RecoilRoot>
+      <Routes>
+        <Route path="/" element={<CardList />} />
+      </Routes>
+    </RecoilRoot>
   );
 }
 

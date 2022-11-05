@@ -8,19 +8,18 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 // import { getDateConvert } from "utils/getDateCovert";
 
-const Card = ({ adData }) => {
-  console.log(adData);
+const Card = ({ cardData }) => {
   function createData(name, description) {
     return { name, description };
   }
 
   const rows = [
-    createData("상태", adData.status),
-    createData("광고 생성일", adData.startDate),
-    createData("일 희망 예산", adData.budget),
-    createData("광고 수익률", adData.report.roas),
-    createData("매출", adData.report.convValue),
-    createData("광고 비용", adData.report.cost),
+    createData("상태", cardData?.status),
+    createData("광고 생성일", cardData?.startDate),
+    createData("일 희망 예산", cardData?.budget),
+    createData("광고 수익률", cardData?.report.roas),
+    createData("매출", cardData?.report.convValue),
+    createData("광고 비용", cardData?.report.cost),
   ];
 
   // adData.status === "ended" ? adData.status + "(" + adData.endDate + ")" : adData.status;
@@ -30,7 +29,6 @@ const Card = ({ adData }) => {
         elevation={3}
         sx={{
           width: 305,
-          // height: 420,
           borderRadius: "10px",
           border: "1 solid #D1D8DC",
         }}
@@ -55,7 +53,7 @@ const Card = ({ adData }) => {
               marginBottom: "40px",
             }}
           >
-            {adData.title}
+            {cardData.title}
           </Typography>
           <Table sx={{ width: "280px" }} aria-label="simple table">
             <TableBody>
