@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import Router from "./App";
+// import GlobalStyles from "styles/GlobalStyles";
+// import { ThemeProvider, useTheme } from "@mui/material";
+
+// const theme = useTheme();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+  // <ThemeProvider theme={theme}>
+  //  <GlobalStyles />
+  // </ThemeProvider>
+  <Router />,
+);
