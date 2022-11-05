@@ -100,6 +100,10 @@ $ npm run dev
 | refactor | 코드 리팩토링                |
 | hotfix   | 치명적이거나 급한 버그 수정  |
 
+- issue 컨벤션도 branch 컨벤션과 동일
+    - 단 `[ Fix ]` 이런식으로 포맷이 달라짐
+
+
 </br>
 
 ## 🔨 사용 기술
