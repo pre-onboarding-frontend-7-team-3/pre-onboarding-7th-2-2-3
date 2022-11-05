@@ -7,7 +7,7 @@ const globalStyles = css`
 
   html,
   body,
-  #app {
+  .app {
     height: 100%;
     overflow: hidden;
     margin: 0;
