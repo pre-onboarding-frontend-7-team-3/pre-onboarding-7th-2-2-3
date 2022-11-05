@@ -8,7 +8,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { startDate, endDate } from "store/atoms/date";
 
-const DateRangeModal = ({handleToggleDateRangePicker}) => {
+const DateRangeModal = ({ handleToggleDateRangePicker }) => {
   const [initialStartDate, setInitialStartDate] = useRecoilState(startDate);
   const [initialEndDate, setInitialEndDate] = useRecoilState(endDate);
 
@@ -28,8 +28,10 @@ const DateRangeModal = ({handleToggleDateRangePicker}) => {
   };
 
   const handleSetDateRange = () => {
-    setInitialStartDate(selectedDateRange[0].startDate);
-    setInitialEndDate(selectedDateRange[0].endDate);
+    const { startDate, endDate } = selectedDateRange[0];
+
+    setInitialStartDate(startDate);
+    setInitialEndDate(endDate);
 
     handleToggleDateRangePicker();
   };
