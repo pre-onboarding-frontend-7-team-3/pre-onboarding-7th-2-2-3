@@ -4,12 +4,12 @@ import Router from "./App";
 // import GlobalStyles from "styles/GlobalStyles";
 // import { ThemeProvider, useTheme } from "@mui/material";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 // const theme = useTheme();
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <ThemeProvider theme={theme}>
-  //  <GlobalStyles />
-  // </ThemeProvider>
+  // <GlobalStyles />
   <Router />,
+  // </ThemeProvider>,
 );

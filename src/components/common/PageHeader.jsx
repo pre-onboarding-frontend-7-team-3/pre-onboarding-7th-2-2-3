@@ -1,6 +1,14 @@
+import { useState } from "react";
 import { Box } from "@mui/material";
+import DateRangeModal from "components/AdManagement/DateRangeModal";
 
 const PageHeader = ({ title }) => {
+  const [isDateRangePickerOpen, setIsDateRangePickerOpen] = useState(true);
+
+  const handleToggleDateRangePicker = () => {
+    setIsDateRangePickerOpen((prev) => !prev);
+  };
+
   return (
     <Box
       sx={{
@@ -13,10 +21,14 @@ const PageHeader = ({ title }) => {
         fontStyle: "normal",
         fontWeight: "900",
         fontSize: "26px",
-        color: '#3A474E',
+        color: "#3A474E",
       }}
     >
-      {title}
+      <Box>{title}</Box>
+      <Box sx={{ position: "relative" }} onClick={handleToggleDateRangePicker}>
+        date
+      </Box>
+      {isDateRangePickerOpen && <DateRangeModal />}
     </Box>
   );
 };
