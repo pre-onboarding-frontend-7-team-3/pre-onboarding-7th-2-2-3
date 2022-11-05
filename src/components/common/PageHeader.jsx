@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 import DateRangeModal from "components/AdManagement/DateRangeModal";
+import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
+import { useRecoilValue } from "recoil";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { startDate, endDate } from "store/atoms/date";
+import { handleFormatDate } from "utils/handleFormatDate";
 
 const PageHeader = ({ title }) => {
   const [isDateRangePickerOpen, setIsDateRangePickerOpen] = useState(true);
+  const initialStartDate = useRecoilValue(startDate);
+  const initialEndDate = useRecoilValue(endDate);
+
+  const DateRange = handleFormatDate(initialStartDate, initialEndDate);
 
   const handleToggleDateRangePicker = () => {
     setIsDateRangePickerOpen((prev) => !prev);
@@ -26,7 +36,10 @@ const PageHeader = ({ title }) => {
     >
       <Box>{title}</Box>
       <Box sx={{ position: "relative" }} onClick={handleToggleDateRangePicker}>
-        date
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          {DateRange}
+          <KeyboardArrowDownSharpIcon fontSize="large" />
+        </Box>
       </Box>
       {isDateRangePickerOpen && <DateRangeModal />}
     </Box>

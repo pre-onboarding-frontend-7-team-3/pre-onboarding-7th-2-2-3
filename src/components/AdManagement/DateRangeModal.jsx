@@ -5,11 +5,12 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
 const DateRangeModal = () => {
+
   // eslint-disable-next-line no-unused-vars
-  const options = {
-  }
+  const options = {};
   return (
     <Box sx={{ position: "absolute", marginTop: "5vh" }}>
+      
       {/* <DateRangePicker /> */}
     </Box>
   );
