@@ -9,20 +9,22 @@ import { startDate, endDate } from "store/atoms/date";
 import { handleFormatDate } from "utils/handleFormatDate";
 
 const PageHeader = ({ title }) => {
-  const [isDateRangePickerOpen, setIsDateRangePickerOpen] = useState(true);
+  const [isShowDateRangePicker, setIsShowDateRangePicker] = useState(false);
   const initialStartDate = useRecoilValue(startDate);
   const initialEndDate = useRecoilValue(endDate);
 
   const DateRange = handleFormatDate(initialStartDate, initialEndDate);
 
   const handleToggleDateRangePicker = () => {
-    setIsDateRangePickerOpen((prev) => !prev);
+    setIsShowDateRangePicker((prev) => !prev);
   };
 
   return (
+    // TODO S.PageHeaderWrapper
     <Box
       sx={{
         display: "flex",
+        justifyContent: "space-between",
         alignItems: "center",
         height: "80px",
         margin: "0 40px",
@@ -34,14 +36,29 @@ const PageHeader = ({ title }) => {
         color: "#3A474E",
       }}
     >
-      <Box>{title}</Box>
-      <Box sx={{ position: "relative" }} onClick={handleToggleDateRangePicker}>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+      {/* TODO S.title */}
+      <Box sx={{ fontWeight: "900", fontSize: "26px" }}>title</Box>
+      {/* TODO S.DateRangeModalWrapper */}
+      <Box onClick={handleToggleDateRangePicker}>
+        {/* TODO S.DateRangeModal */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            position: "relative",
+            minWidth: "260px",
+            fontWeight: "500",
+            fontSize: "14px",
+            cursor: "pointer",
+          }}
+        >
           {DateRange}
           <KeyboardArrowDownSharpIcon fontSize="large" />
         </Box>
       </Box>
-      {isDateRangePickerOpen && <DateRangeModal />}
+      {isShowDateRangePicker && (
+        <DateRangeModal handleToggleDateRangePicker={handleToggleDateRangePicker} />
+      )}
     </Box>
   );
 };
