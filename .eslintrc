@@ -1,7 +1,6 @@
 {
   "extends": ["prettier", "react-app", "eslint:recommended"],
   "rules": {
-    // "no-console": ["error", { "allow": ["error"] }],
     "curly": "error"
   },
   "parserOptions": {
