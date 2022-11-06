@@ -1,9 +1,7 @@
-import React from 'react'
+import { useEffect } from "react";
 
-const CompareGraph = () => {
-  return (
-    <div>CompareGraph</div>
-  )
+function CompareGraph() {
+  return <div>graph</div>;
 }
 
-export default CompareGraph
+export default CompareGraph;
