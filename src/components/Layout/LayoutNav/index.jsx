@@ -30,7 +30,6 @@ const LayoutNav = () => {
       <Link to="/">
         <NavLogo src="/LEVER_LOGO.png" alt="COMPANY_LOGO" />
       </Link>
-
       <NavService />
       <NavAdCenter />
       <NavGuide />

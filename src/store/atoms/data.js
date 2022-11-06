@@ -5,7 +5,7 @@ export const trendDataQuery = selector({
   key: "trendDataQuery",
   get: async ({ get }) => {
     // const date = get(dateState);
-    const res = await axios.get("http://localhost:4000/trend_data");
+    const res = await axios.get("https://madup-wanted-3.herokuapp.com/trend_data");
     return res.data;
   },
 });
