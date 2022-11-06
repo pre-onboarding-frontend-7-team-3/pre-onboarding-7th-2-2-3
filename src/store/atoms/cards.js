@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const adListFilterState = atom({
   key: "adListFilter",
-  default: "전체 광고",
+  default: "전체",
 });
 
 export const adListState = selector({
@@ -21,13 +21,13 @@ export const adListFilterQuery = selector({
     const adList = get(adListState);
 
     switch (filter) {
-      case "전체 광고": {
+      case "전체": {
         return adList;
       }
-      case "진행중인 광고": {
+      case "진행중": {
         return adList.filter((ad) => ad.status === "active");
       }
-      case "종료된 광고": {
+      case "중단됨": {
         return adList.filter((ad) => ad.status === "ended");
       }
       default:

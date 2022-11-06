@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import styled from "styled-components";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -14,56 +14,56 @@ const AdManagementHeader = () => {
     setFilter(e.target.value);
   };
 
+  const customStyle = {
+    select: {
+      width: "100px",
+      height: "40px",
+      borderRadius: "10px",
+      fontWeight: "500",
+      fontSize: "14px",
+    },
+    menuItem: {
+      fontWeight: "500",
+      fontSize: "14px",
+    },
+    button: {
+      width: "108px",
+      height: "40px",
+      padding: "12px 20px",
+      color: "#FFFFFF",
+      backgroundColor: `"#586CF5"`,
+      borderRadius: "10px",
+    },
+  };
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        height: "80px",
-      }}
-    >
+    <HeaderWrapper>
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
         <Select
           onChange={handleChange}
+          value={filter}
           inputProps={{ "aria-label": "Without label" }}
-          sx={{
-            width: "130px",
-            height: "40px",
-            borderRadius: "10px",
-            fontWeight: "500",
-            fontSize: "14px",
-          }}
+          sx={customStyle.select}
         >
-          {AD_MANAGEMENT_DATA.map(({ name, status }, idx) => (
-            <MenuItem
-              key={idx}
-              value={name}
-              sx={{
-                fontWeight: "500",
-                fontSize: "14px",
-              }}
-            >
-              {name}
+          {AD_MANAGEMENT_DATA.map(({ text }, idx) => (
+            <MenuItem key={idx} value={text} sx={customStyle.menuItem}>
+              {text}
             </MenuItem>
           ))}
         </Select>
       </FormControl>
-      <Button
-        variant="contained"
-        sx={{
-          width: "108px",
-          height: "40px",
-          padding: "12px 20px",
-          color: "#FFFFFF",
-          backgroundColor: `"#586CF5"`,
-          borderRadius: "10px",
-        }}
-      >
+      <Button variant="contained" sx={customStyle.button}>
         {CREATE_AD}
       </Button>
-    </Box>
+    </HeaderWrapper>
   );
 };
 
 export default AdManagementHeader;
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+`;
