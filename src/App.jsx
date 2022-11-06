@@ -3,6 +3,8 @@ import { RecoilRoot } from "recoil";
 import CardList from "components/card/CardList";
 import Home from "pages/Home";
 
+// import { ThemeProvider } from "styled-components";
+// import { GlobalStyle, Theme } from "shared/global.style";
 const Router = () => {
   return (
     <RecoilRoot>
