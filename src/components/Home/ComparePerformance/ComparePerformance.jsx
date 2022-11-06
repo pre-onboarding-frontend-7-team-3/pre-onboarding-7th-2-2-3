@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useRecoilState, useRecoilValueLoadable } from "recoil";
-import { dateState, trendDataQuery } from "store/store";
+import { dateState, trendDataQuery } from "store/atoms/kpi";
 import { getKPI } from "utils/getKPI";
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
 
