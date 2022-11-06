@@ -12,24 +12,6 @@ const Card = ({ cardData }) => {
   const [toogle, setToogle] = useState(false);
   const statusModify = toogle ? "수정 완료" : "수정 하기";
 
-  // const inputProps = toogle
-  //   ? { readOnly: true }
-  //   : {
-  //       onChange: (e) => {
-  //         console.log(111);
-  //         UpdateValue(e, idx);
-  //       },
-  //     };
-
-  function createData(name, description) {
-    if (description === "active") {
-      description = "진행중";
-    } else if (description === "ended") {
-      description = "중단됨";
-    }
-    return { name, description };
-  }
-
   const ModifyProps = !toogle
     ? {
         onClick: () => {
@@ -38,9 +20,21 @@ const Card = ({ cardData }) => {
       }
     : {
         onClick: (e) => {
-          window.location.reload();
+          alert("수정이 완료되었습니다");
+          setToogle(false);
         },
       };
+
+  const inputProps = !toogle ? { readOnly: true } : {};
+
+  function createData(name, description) {
+    if (description === "active") {
+      description = "진행중";
+    } else if (description === "ended") {
+      description = "중단됨" + " (" + dateCovert(cardData.endDate) + ")";
+    }
+    return { name, description };
+  }
 
   const rows = [
     createData("상태", cardData.status),
@@ -103,9 +97,8 @@ const Card = ({ cardData }) => {
                         fontSize: "12px",
                         color: "#3A474E",
                       }}
-                      // {...inputProps}
-                      value={row.description}
-                      idx={row.idx}
+                      {...inputProps}
+                      defaultValue={row.description}
                     />
                   </TableCell>
                 </TableRow>
@@ -113,7 +106,7 @@ const Card = ({ cardData }) => {
             </TableBody>
           </Table>
           <Button
-            onClick={() => ModifyProps()}
+            {...ModifyProps}
             variant="outlined"
             sx={{
               width: "92px",
