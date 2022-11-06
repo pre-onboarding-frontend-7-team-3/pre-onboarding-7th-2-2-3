@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import CardList from "components/card/CardList";
@@ -21,7 +22,9 @@ const Router = () => {
           path="/ads"
           element={
             <Layout>
-              <CardList />
+              <Suspense fallback={<div>loading component</div>}>
+                <CardList />
+              </Suspense>
             </Layout>
           }
         />

@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import React, { Suspense } from "react";
+import React from "react";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
@@ -12,11 +12,9 @@ root.render(
   <>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <Suspense fallback={<></>}>
-        <Router>
-          <App />
-        </Router>
-      </Suspense>
+      <Router>
+        <App />
+      </Router>
     </ThemeProvider>
   </>,
 );
