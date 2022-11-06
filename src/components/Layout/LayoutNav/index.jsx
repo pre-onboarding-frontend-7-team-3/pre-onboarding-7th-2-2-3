@@ -16,10 +16,12 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 
+const LogoWrapper = styled.div`
+  margin: 40px 60px 100px 0;
+`;
+
 const NavLogo = styled.img`
   width: 124px;
-
-  margin: 40px 60px 100px 0;
 
   cursor: pointer;
 `;
@@ -27,9 +29,11 @@ const NavLogo = styled.img`
 const LayoutNav = () => {
   return (
     <Wrapper>
-      <Link to="/">
-        <NavLogo src="/LEVER_LOGO.png" alt="COMPANY_LOGO" />
-      </Link>
+      <LogoWrapper>
+        <Link to="/">
+          <NavLogo src="/LEVER_LOGO.png" alt="COMPANY_LOGO" />
+        </Link>
+      </LogoWrapper>
 
       <NavService />
       <NavAdCenter />
