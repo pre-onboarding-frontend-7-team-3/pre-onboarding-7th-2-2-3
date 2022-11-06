@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
-import { Box, Grid, Table, Typography } from "@mui/material";
+import { Box, Grid, InputBase, Table, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -51,17 +51,6 @@ const Card = ({ cardData }) => {
     createData("광고 비용", vaildateCost(cardData.report.cost)),
   ];
 
-  // const UpdateValue = (e, idx) => {
-  //   cardData((pre) =>
-  //     pre.map((el) => {
-  //       if (el.id === idx) {
-  //         el = e.target.value;
-  //       }
-  //       return el;
-  //     }),
-  //   );
-  // };
-
   return (
     <Grid item xs={4}>
       <Paper
@@ -107,11 +96,12 @@ const Card = ({ cardData }) => {
                     {row.name}
                   </TableCell>
                   <TableCell align="right">
-                    <input
+                    <InputBase
                       style={{
-                        webkitAppearance: "none",
-                        mozAppearance: "none",
-                        appearance: "none",
+                        height: "10px",
+                        fontWeight: "700",
+                        fontSize: "12px",
+                        color: "#3A474E",
                       }}
                       // {...inputProps}
                       value={row.description}
