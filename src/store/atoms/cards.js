@@ -9,7 +9,7 @@ export const adListFilterState = atom({
 export const adListState = selector({
   key: "adListState",
   get: async ({ get }) => {
-    const { data } = await axios.get("http://localhost:4000/ad_list_data");
+    const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/ad_list_data`);
     return data.ads;
   },
 });
