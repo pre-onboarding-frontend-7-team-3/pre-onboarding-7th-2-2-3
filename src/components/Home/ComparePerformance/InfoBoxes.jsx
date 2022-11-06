@@ -82,6 +82,7 @@ export const Conv = ({ value, exValue }) => {
 };
 export const Revenue = ({ value, exValue }) => {
   const diff = value - exValue;
+  console.log(value, exValue, diff);
   return (
     <InfoBoxWrapper>
       <TitleBox>

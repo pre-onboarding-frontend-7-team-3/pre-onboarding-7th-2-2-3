@@ -35,7 +35,7 @@ export default function ComparePerformance() {
           <Imp value={kpiValues[0]?.imp} exValue={kpiValues[1]?.imp} />
           <Click value={kpiValues[0]?.click} exValue={kpiValues[1]?.click} />
           <Conv value={kpiValues[0]?.conv} exValue={kpiValues[1]?.conv} />
-          <Revenue value={kpiValues[0]?.revenue} exValue={kpiValues[0]?.revenue} />
+          <Revenue value={kpiValues[0]?.revenue} exValue={kpiValues[1]?.revenue} />
         </Container>
       )}
     </>

@@ -1,5 +1,6 @@
 const unitDecider = (value) => {
-  const length = value.toString().length;
+  const length = parseInt(value).toString().length;
+
   if (length <= 3) {
     return value;
   } else if (length === 4) {
