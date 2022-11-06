@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import _ from "lodash";
 
 import { useOnClickOutside } from "hooks/useOnClickOutside";
+import useLoading from "hooks/useLoading";
 
 import LayoutNav from "./LayoutNav";
 import LayoutHeader from "./LayoutHeader";
@@ -12,10 +13,11 @@ import Spinner from "components/common/Spinner";
 import Icon from "components/common/Icon";
 
 const Layout = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
-  const path = useLocation();
-
+  // const [isLoading, setIsLoading] = useState(true);
+  // const path = useLocation();
+  const {isLoading} = useLoading();
   const navRef = useRef(null);
   useOnClickOutside(navRef, () => {
     setIsToggled(false);
@@ -33,16 +35,6 @@ const Layout = ({ children }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize]);
-
-  useEffect(() => {
-    const delayRender = setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
-    return () => {
-      setIsLoading(true);
-      clearTimeout(delayRender);
-    };
-  }, [path, setIsLoading]);
 
   return (
     <Wrapper>
