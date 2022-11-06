@@ -24,162 +24,176 @@
     "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/store/atoms/date.js": "22",
     "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/store/atoms/graphNav.js": "23",
     "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/store/atoms/kpi.js": "24",
-    "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/utils/getKPI.js": "25"
+    "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/utils/getKPI.js": "25",
+    "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/components/AdManagement/DateRangeModal.jsx": "26",
+    "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/store/atoms/cards.js": "27"
   },
   {
     "size": 532,
     "mtime": 1667736680243,
-    "results": "26",
-    "hashOfConfig": "27"
-  },
-  {
-    "size": 3796,
-    "mtime": 1667735178717,
     "results": "28",
     "hashOfConfig": "29"
   },
   {
-    "size": 1590,
-    "mtime": 1667725445355,
+    "size": 3796,
+    "mtime": 1667735178717,
     "results": "30",
     "hashOfConfig": "31"
   },
   {
-    "size": 303,
-    "mtime": 1667736680245,
+    "size": 677,
+    "mtime": 1667748703686,
     "results": "32",
-    "hashOfConfig": "27"
+    "hashOfConfig": "29"
   },
   {
-    "size": 130,
-    "mtime": 1667661871567,
+    "size": 303,
+    "mtime": 1667736680245,
     "results": "33",
     "hashOfConfig": "29"
   },
   {
+    "size": 130,
+    "mtime": 1667661871567,
+    "results": "34",
+    "hashOfConfig": "31"
+  },
+  {
     "size": 134,
     "mtime": 1667680875258,
-    "results": "34",
-    "hashOfConfig": "29"
+    "results": "35",
+    "hashOfConfig": "31"
   },
   {
     "size": 166,
     "mtime": 1667704153207,
-    "results": "35",
-    "hashOfConfig": "29"
-  },
-  {
-    "size": 259,
-    "mtime": 1667725263662,
     "results": "36",
     "hashOfConfig": "31"
   },
   {
+    "size": 186,
+    "mtime": 1667748478489,
+    "results": "37",
+    "hashOfConfig": "29"
+  },
+  {
     "size": 731,
     "mtime": 1667736680243,
-    "results": "37",
-    "hashOfConfig": "27"
+    "results": "38",
+    "hashOfConfig": "29"
   },
   {
     "size": 35,
     "mtime": 1667736680244,
-    "results": "38",
-    "hashOfConfig": "27"
+    "results": "39",
+    "hashOfConfig": "29"
   },
   {
     "size": 121,
     "mtime": 1667736680244,
-    "results": "39",
-    "hashOfConfig": "27"
+    "results": "40",
+    "hashOfConfig": "29"
   },
   {
     "size": 1705,
     "mtime": 1667736680244,
-    "results": "40",
-    "hashOfConfig": "27"
+    "results": "41",
+    "hashOfConfig": "29"
   },
   {
     "size": 3283,
     "mtime": 1667736680244,
-    "results": "41",
-    "hashOfConfig": "27"
+    "results": "42",
+    "hashOfConfig": "29"
   },
   {
     "size": 835,
     "mtime": 1667736680244,
-    "results": "42",
-    "hashOfConfig": "27"
+    "results": "43",
+    "hashOfConfig": "29"
   },
   {
     "size": 38,
     "mtime": 1667736680245,
-    "results": "43",
-    "hashOfConfig": "27"
+    "results": "44",
+    "hashOfConfig": "29"
   },
   {
     "size": 280,
     "mtime": 1667736680245,
-    "results": "44",
-    "hashOfConfig": "27"
+    "results": "45",
+    "hashOfConfig": "29"
   },
   {
     "size": 324,
     "mtime": 1667736680245,
-    "results": "45",
-    "hashOfConfig": "27"
+    "results": "46",
+    "hashOfConfig": "29"
   },
   {
     "size": 0,
     "mtime": 1667736680245,
-    "results": "46",
-    "hashOfConfig": "27"
+    "results": "47",
+    "hashOfConfig": "29"
   },
   {
     "size": 39,
     "mtime": 1667736680245,
-    "results": "47",
-    "hashOfConfig": "27"
+    "results": "48",
+    "hashOfConfig": "29"
   },
   {
     "size": 391,
     "mtime": 1667736680245,
-    "results": "48",
-    "hashOfConfig": "27"
+    "results": "49",
+    "hashOfConfig": "29"
   },
   {
     "size": 818,
     "mtime": 1667736680246,
-    "results": "49",
-    "hashOfConfig": "27"
+    "results": "50",
+    "hashOfConfig": "29"
   },
   {
     "size": 219,
     "mtime": 1667736680246,
-    "results": "50",
-    "hashOfConfig": "27"
+    "results": "51",
+    "hashOfConfig": "29"
   },
   {
     "size": 0,
     "mtime": 1667736680246,
-    "results": "51",
-    "hashOfConfig": "27"
+    "results": "52",
+    "hashOfConfig": "29"
   },
   {
     "size": 292,
     "mtime": 1667736680246,
-    "results": "52",
-    "hashOfConfig": "27"
+    "results": "53",
+    "hashOfConfig": "29"
   },
   {
     "size": 1367,
     "mtime": 1667736680246,
-    "results": "53",
-    "hashOfConfig": "27"
+    "results": "54",
+    "hashOfConfig": "29"
   },
   {
-    "filePath": "54",
-    "messages": "55",
-    "suppressedMessages": "56",
+    "size": 2365,
+    "mtime": 1667737732178,
+    "results": "55",
+    "hashOfConfig": "29"
+  },
+  {
+    "size": 905,
+    "mtime": 1667748431238,
+    "results": "56",
+    "hashOfConfig": "29"
+  },
+  {
+    "filePath": "57",
+    "messages": "58",
+    "suppressedMessages": "59",
     "errorCount": 0,
     "fatalErrorCount": 0,
     "warningCount": 0,
@@ -187,18 +201,6 @@
     "fixableWarningCount": 0
   },
   "1hyni0r",
-  {
-    "filePath": "57",
-    "messages": "58",
-    "suppressedMessages": "59",
-    "errorCount": 0,
-    "fatalErrorCount": 0,
-    "warningCount": 1,
-    "fixableErrorCount": 0,
-    "fixableWarningCount": 0,
-    "source": null
-  },
-  "s85xfe",
   {
     "filePath": "60",
     "messages": "61",
@@ -210,7 +212,7 @@
     "fixableWarningCount": 0,
     "source": null
   },
-  "2rzfa9",
+  "s85xfe",
   {
     "filePath": "63",
     "messages": "64",
@@ -231,7 +233,6 @@
     "fixableErrorCount": 0,
     "fixableWarningCount": 0
   },
-  "10hg45h",
   {
     "filePath": "69",
     "messages": "70",
@@ -242,6 +243,7 @@
     "fixableErrorCount": 0,
     "fixableWarningCount": 0
   },
+  "10hg45h",
   {
     "filePath": "72",
     "messages": "73",
@@ -422,18 +424,46 @@
     "fixableErrorCount": 0,
     "fixableWarningCount": 0
   },
+  {
+    "filePath": "126",
+    "messages": "127",
+    "suppressedMessages": "128",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "129",
+    "messages": "130",
+    "suppressedMessages": "131",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
+  {
+    "filePath": "132",
+    "messages": "133",
+    "suppressedMessages": "134",
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0
+  },
   "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/App.jsx",
   [],
   [],
   "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/components/card/Card.jsx",
   [
-    "126"
+    "135"
   ],
   [],
   "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/components/card/CardList.jsx",
-  [
-    "127"
-  ],
+  [],
   [],
   "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/index.jsx",
   [],
@@ -498,49 +528,25 @@
   "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/utils/getKPI.js",
   [],
   [],
+  "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/components/AdManagement/DateRangeModal.jsx",
+  [],
+  [],
+  "/Users/eunjijo/Desktop/pre-onboarding-7th-2-2-3/src/store/atoms/cards.js",
+  [],
+  [],
   {
-    "ruleId": "128",
+    "ruleId": "136",
     "severity": 1,
-    "message": "129",
+    "message": "137",
     "line": 34,
     "column": 27,
-    "nodeType": "130",
-    "messageId": "131",
+    "nodeType": "138",
+    "messageId": "139",
     "endLine": 34,
     "endColumn": 28
-  },
-  {
-    "ruleId": "132",
-    "severity": 1,
-    "message": "133",
-    "line": 16,
-    "column": 6,
-    "nodeType": "134",
-    "endLine": 16,
-    "endColumn": 8,
-    "suggestions": "135"
   },
   "no-useless-concat",
   "Unexpected string concatenation of literals.",
   "BinaryExpression",
-  "unexpectedConcat",
-  "react-hooks/exhaustive-deps",
-  "React Hook useEffect has a missing dependency: 'setCardDatas'. Either include it or remove the dependency array.",
-  "ArrayExpression",
-  [
-    "136"
-  ],
-  {
-    "desc": "71",
-    "fix": "137"
-  },
-  {
-    "range": "138",
-    "text": "139"
-  },
-  [
-    614,
-    616
-  ],
-  "[setCardDatas]"
+  "unexpectedConcat"
 ]
