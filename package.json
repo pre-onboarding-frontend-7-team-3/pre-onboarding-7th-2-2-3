@@ -33,7 +33,7 @@
   "scripts": {
     "heroku-prebuild": "npm i --only=production --ignore-scripts && npm run build",
     "heroku-postbuild": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "start": "node server",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "serve-json": "json-server --watch db.json --port 4000",
