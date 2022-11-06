@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import styled from "@emotion/styled";
 
-import { endDateAtom, startDateAtom } from "store/atoms/date";
-import { trendDataQuery } from "store/atoms/data";
-
+import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { getKPI } from "utils/getKPI";
-
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
+import { endDateAtom, startDateAtom } from "store/date";
+import { trendDataQuery } from "store/trend";
 
-//
+import { LoadingWrapper } from "components/Layout";
+import Spinner from "components/common/Spinner";
+
 export default function ComparePerformance() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);
@@ -29,7 +29,11 @@ export default function ComparePerformance() {
 
   return (
     <>
-      {state === "loading" && <div>loading</div>}
+      {state === "loading" && (
+        <LoadingWrapper>
+          <Spinner />
+        </LoadingWrapper>
+      )}
       {state === "hasValue" && kpiValues && (
         <Container>
           <ROAS value={kpiValues[0]?.roas} exValue={kpiValues[1]?.roas} />

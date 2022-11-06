@@ -7,7 +7,7 @@ const theme = {
     blue: "#586CF5",
     white: "#FFFFFF",
   },
-  flexcenter: css`
+  flexCenter: css`
     display: flex;
     justify-content: center;
     align-items: center;

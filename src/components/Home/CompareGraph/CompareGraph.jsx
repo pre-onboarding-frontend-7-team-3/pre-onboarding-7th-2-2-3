@@ -5,11 +5,10 @@ import {
   graphDateRangeState,
   graphXAxisState,
   menuItemsWithOutFirstState,
-} from "store/atoms/graphNav";
-
+} from "store/graphNav";
 import { GRAPH_RANGE_DAY_MENU_ITEM, GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
 
-import DropDown from "components/DropDown";
+import DropDown from "components/dropDown";
 
 import { centerize } from "shared/GlobalStyle";
 

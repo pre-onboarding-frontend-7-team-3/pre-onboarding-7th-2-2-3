@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 
-import { startDateAtom, endDateAtom } from "store/atoms/date";
+import { startDateAtom, endDateAtom } from "store/date";
 
 import { handleFormatDate } from "utils/handleFormatDate";
 

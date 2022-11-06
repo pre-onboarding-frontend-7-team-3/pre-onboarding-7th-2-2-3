@@ -7,25 +7,6 @@ import NavAdCenter from "./NavAdCenter";
 import NavGuide from "./NavGuide";
 import NavFooter from "./NavFooter";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 320px;
-  height: 100%;
-`;
-
-const LogoWrapper = styled.div`
-  margin: 40px 60px 100px 0;
-`;
-
-const NavLogo = styled.img`
-  width: 124px;
-
-  cursor: pointer;
-`;
-
 const LayoutNav = () => {
   return (
     <Wrapper>
@@ -44,3 +25,22 @@ const LayoutNav = () => {
 };
 
 export default LayoutNav;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 320px;
+  height: 100%;
+`;
+
+const LogoWrapper = styled.div`
+  margin: 40px 60px 100px 0;
+`;
+
+const NavLogo = styled.img`
+  width: 124px;
+
+  cursor: pointer;
+`;

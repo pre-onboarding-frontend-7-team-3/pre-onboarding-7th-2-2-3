@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 
-import { adListFilterQuery } from "store/atoms/cards";
+import { adListFilterQuery } from "store/adList";
 
 import Card from "./Card";
 import AdManagementHeader from "components/AdManagement/AdManagementHeader";

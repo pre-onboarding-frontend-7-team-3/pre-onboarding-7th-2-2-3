@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import styled from "styled-components";
 
-import { adListFilterState } from "store/atoms/cards";
+import { adListFilterState } from "store/adList";
 
 import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
 

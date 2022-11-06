@@ -6,6 +6,33 @@ import { AD_CENTER_TYPE } from "constants/AdCenterType";
 
 import Icon from "components/common/Icon";
 
+const NavAdCenter = () => {
+  const navigate = useNavigate();
+
+  return (
+    <Wrapper>
+      <TitleWrapper>광고 센터</TitleWrapper>
+
+      {AD_CENTER_TYPE.map((type, index) => {
+        return (
+          <ItemWrapper
+            key={index}
+            onClick={() => {
+              navigate(type.url);
+            }}
+            to={type.url}
+          >
+            <Icon icon={type.eng_name} url={type.url} />
+            <span>{type.name}</span>
+          </ItemWrapper>
+        );
+      })}
+    </Wrapper>
+  );
+};
+
+export default NavAdCenter;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -69,30 +96,3 @@ const ItemWrapper = styled(NavLink)`
 
   cursor: pointer;
 `;
-
-const NavAdCenter = () => {
-  const navigate = useNavigate();
-
-  return (
-    <Wrapper>
-      <TitleWrapper>광고 센터</TitleWrapper>
-
-      {AD_CENTER_TYPE.map((type, index) => {
-        return (
-          <ItemWrapper
-            key={index}
-            onClick={() => {
-              navigate(type.url);
-            }}
-            to={type.url}
-          >
-            <Icon icon={type.eng_name} url={type.url} />
-            <span>{type.name}</span>
-          </ItemWrapper>
-        );
-      })}
-    </Wrapper>
-  );
-};
-
-export default NavAdCenter;

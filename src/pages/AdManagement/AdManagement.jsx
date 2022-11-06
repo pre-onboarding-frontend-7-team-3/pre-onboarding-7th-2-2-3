@@ -1,7 +1,7 @@
 import { PAGE_HEADER_TITLE } from "constants/PageheaderData";
 
 import PageHeader from "components/common/PageHeader";
-import CardList from "components/Card/CardList";
+import CardList from "components/card/CardList";
 import SEO from "components/common/SEO";
 
 const AdManagement = () => {
