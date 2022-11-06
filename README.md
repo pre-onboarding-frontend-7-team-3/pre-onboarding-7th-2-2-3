@@ -8,18 +8,8 @@
 
 </br>
 
-### ✨주요기능! (gif,사진 첨부)
-
-### 1. blahblah
-
-</br>
-
-### 2. blahblah
-
-</br>
-
 ## 📖 목차
-
+- [기능 시연](#기능-시연)
 - [실행 방법](#%EF%B8%8F-실행-방법)
 - [협업 과정](#-협업-과정)
 - [Best Practice 및 채택 근거](#%EF%B8%8F-best-practice-및-채택-근거)
@@ -30,10 +20,18 @@
 
 </br>
 
+## 기능 시연
+
+### 1.
+
+</br>
+
+### 2.
+
 ## ⌨️ 실행 방법
 
 ```jsx
-$ git clone https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-1-3.git
+$ git clone https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3.git
 $ npm install
 $ npm run dev
 ```
@@ -42,9 +40,8 @@ $ npm run dev
 
 ## 📃 협업 과정
 
-1. 우선 노션에서 프로젝트를 페이지 별로 나누고 또 다시 페이지 별로 필요한 컴포넌트를 나열하여 작업을 최대한 세분화 하려고 했습니다.
-
-   - https://www.notion.so/2-1-498c225b2d814eb8b77bf1d6d312037d
+1. 노션 워크스페이스에서 프로젝트를 페이지 별로 나누고 페이지 간 주요 컴포넌트를 나열하여 팀 단위의 작업을 최대한 세분화 하려고 했습니다.
+>[노션 링크](https://www.notion.so/2-1-498c225b2d814eb8b77bf1d6d312037d)
 
 2. 본 프로젝트는 동료학습에 최적화된 과정을 찾아가며 진행했습니다. [VSC Live Code extension](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)을 활용해서 라이브 코드 리뷰를 진행하고 각자 구현한 코드에 대한 피드백 및 리팩토링 후 `페어 프로그래밍` 방식으로 Best Practice를 채택했습니다.
 
