@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useOnClickOutside(ref, callback) {
+export const useOnClickOutside = (ref, callback) => {
   const [isTouchEvent, setTouchEvent] = useState(false);
   const eventType = isTouchEvent ? "touchend" : "click";
 
@@ -27,4 +27,4 @@ export function useOnClickOutside(ref, callback) {
   useEffect(() => {
     setTouchEvent("ontouchstart" in document.documentElement);
   }, []);
-}
+};

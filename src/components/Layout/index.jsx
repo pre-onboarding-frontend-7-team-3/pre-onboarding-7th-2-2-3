@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "@emotion/styled";
 import _ from "lodash";
 
-import { useOnClickOutside } from "hooks/AdManagement/useOnClickOutside";
+import { useOnClickOutside } from "hooks/useOnClickOutside";
 
 import LayoutNav from "./LayoutNav";
 import LayoutHeader from "./LayoutHeader";
