@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { useRecoilState, useRecoilValueLoadable } from "recoil";
 import { dateState, trendDataQuery } from "store/atoms/kpi";
@@ -7,22 +7,33 @@ import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
 
 export default function ComparePerformance() {
   const [{ startDate, endDate }] = useRecoilState(dateState);
-  const data = useRecoilValueLoadable(trendDataQuery);
-  if (data.state === "loading") {
-    return <>loading</>;
-  }
+  const { state, contents } = useRecoilValueLoadable(trendDataQuery);
+  const [kpiValues, setKpiValues] = useState(null);
 
-  const kpiValues = getKPI(data.contents, startDate, endDate);
+  useEffect(() => {
+    async function awaitKPI() {
+      const kpiContents = await contents;
+      const kpi = getKPI(kpiContents, startDate, endDate);
+      setKpiValues(kpi);
+    }
+
+    awaitKPI();
+  }, [state, contents, startDate, endDate]);
 
   return (
-    <Container>
-      <ROAS value={kpiValues[0].roas} exValue={kpiValues[1].roas} />
-      <Cost value={kpiValues[0].cost} exValue={kpiValues[1].cost} />
-      <Imp value={kpiValues[0].imp} exValue={kpiValues[1].imp} />
-      <Click value={kpiValues[0].click} exValue={kpiValues[1].click} />
-      <Conv value={kpiValues[0].conv} exValue={kpiValues[1].conv} />
-      <Revenue value={kpiValues[0].revenue} exValue={kpiValues[0].revenue} />
-    </Container>
+    <>
+      {state === "loading" && <div>loading</div>}
+      {state === "hasValue" && kpiValues && (
+        <Container>
+          <ROAS value={kpiValues[0]?.roas} exValue={kpiValues[1]?.roas} />
+          <Cost value={kpiValues[0]?.cost} exValue={kpiValues[1]?.cost} />
+          <Imp value={kpiValues[0]?.imp} exValue={kpiValues[1]?.imp} />
+          <Click value={kpiValues[0]?.click} exValue={kpiValues[1]?.click} />
+          <Conv value={kpiValues[0]?.conv} exValue={kpiValues[1]?.conv} />
+          <Revenue value={kpiValues[0]?.revenue} exValue={kpiValues[0]?.revenue} />
+        </Container>
+      )}
+    </>
   );
 }
 
