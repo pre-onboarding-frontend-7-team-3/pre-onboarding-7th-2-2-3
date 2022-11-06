@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useRecoilState } from "recoil";
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import { DateRangePicker } from "react-date-range";
 import ko from "date-fns/esm/locale/ko/index.js";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { startDate, endDate } from "store/atoms/date";
+import { useStartDate } from "hooks/AdManagement/useStartDate";
+import { useEndDate } from "hooks/AdManagement/useEndDate";
 
 const DateRangeModal = ({ handleToggleDateRangePicker }) => {
-  const [initialStartDate, setInitialStartDate] = useRecoilState(startDate);
-  const [initialEndDate, setInitialEndDate] = useRecoilState(endDate);
+  const { initialStartDate, setInitialStartDate } = useStartDate();
+  const { initialEndDate, setInitialEndDate } = useEndDate();
 
   const [selectedDateRange, setSelectedDateRange] = useState([
     {
