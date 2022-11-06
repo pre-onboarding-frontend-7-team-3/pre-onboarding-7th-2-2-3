@@ -66,4 +66,5 @@ const HeaderWrapper = styled.div`
   ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
   height: 80px;
+  padding: 0 40px 0 0;
 `;

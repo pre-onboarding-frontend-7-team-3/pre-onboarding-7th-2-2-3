@@ -21,7 +21,7 @@ const PageHeader = ({ title }) => {
 
   return (
     <PageHeaderWrapper>
-      <PageTitle>title{title}</PageTitle>
+      <PageTitle>{title}</PageTitle>
       <DateRangeContainer onClick={handleToggleDateRangePicker}>
         <FlexBox>
           {DateRange}
@@ -40,8 +40,8 @@ export default PageHeader;
 const PageHeaderWrapper = styled.div`
   ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
-  height: 80px;
-  margin: 0 40px;
+  min-height: 80px;
+  margin: 0 40px 0 10px;
   border-bottom: 1px solid #edeff1;
   font-weight: 900;
   font-size: 26px;

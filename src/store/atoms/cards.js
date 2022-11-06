@@ -9,7 +9,7 @@ export const adListFilterState = atom({
 export const adListState = selector({
   key: "adListState",
   get: async ({ get }) => {
-    const { data } = await axios.get("http://localhost:4000/ad_list_data");
+    const { data } = await axios.get("https://madup-wanted-3.herokuapp.com/ad_list_data");
     return data.ads;
   },
 });
