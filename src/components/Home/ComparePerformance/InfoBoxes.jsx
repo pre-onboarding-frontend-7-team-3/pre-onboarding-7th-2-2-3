@@ -1,3 +1,4 @@
+import styled from '@emotion/styled';
 import React from 'react'
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import unitDecider from 'utils/unitDecider';
@@ -72,14 +73,32 @@ export const Conv = ({value, exValue}) => {
 export const Revenue = ({value, exValue}) => {
   const diff = value - exValue
   return (
-    <div>
-      <h2>매출</h2>
-      <p>{unitDecider(parseInt(value))} 원</p>
+    // <InfoBoxWrapper>
+    <InfoBoxWrapper>
+      <TitleBox >
+        <h2>매출</h2>
+        <p>{unitDecider(parseInt(value))} 원</p>
+      </TitleBox>
       <div>
         {diff > 0? <AiOutlineCaretUp/> : <AiOutlineCaretDown/> }
         {unitDecider(Math.abs(diff))} 원
       </div>
-    </div>
+    </InfoBoxWrapper>
   )
 }
 
+const InfoBoxWrapper = styled.div`
+    border :1px solid red;
+    margin:10px;
+    width: 
+  div {
+    float:left;
+    /* border :1px solid red; */
+    /* width:50%; */
+    
+
+  }
+`
+const TitleBox = styled.div`
+  width:80%;
+`
