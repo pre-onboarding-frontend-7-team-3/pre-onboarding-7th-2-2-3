@@ -4,7 +4,7 @@ import Card from "./Card";
 import PageHeader from "components/common/PageHeader";
 import { adListFilterQuery } from "store/atoms/cards";
 import AdManagementHeader from "components/AdManagement/AdManagementHeader";
-import { useRecoilValue } from "recoil";
+import { useRecoilValue } from "recoil";  
 
 const CardList = () => {
   const adList = useRecoilValue(adListFilterQuery);
@@ -30,4 +30,5 @@ const CardListContainer = styled.div`
 
 const GridWrapper = styled.div`
   display: flex;
+  padding-left: 10px;
 `;
