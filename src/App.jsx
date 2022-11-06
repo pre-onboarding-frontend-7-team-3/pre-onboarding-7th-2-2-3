@@ -1,23 +1,20 @@
-import DashBoard from "pages/DashBoard";
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import { GlobalStyle, Theme } from "shared/global.style";
-import { ThemeProvider } from "styled-components";
+import CardList from "components/card/CardList";
+import Home from "pages/Home";
 
-function App() {
+// import { ThemeProvider } from "styled-components";
+// import { GlobalStyle, Theme } from "shared/global.style";
+const Router = () => {
   return (
     <RecoilRoot>
-      <GlobalStyle />
-      <ThemeProvider theme={Theme}>
-        <React.Suspense fallback={<div>..loading</div>}>
-          <Routes>
-            <Route path="/" element={<DashBoard />} />
-          </Routes>
-        </React.Suspense>
-      </ThemeProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ads" element={<CardList />} />
+        <Route />
+      </Routes>
     </RecoilRoot>
   );
-}
+};
 
-export default App;
+export default Router;
