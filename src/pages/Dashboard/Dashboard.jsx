@@ -1,5 +1,15 @@
+/* eslint-disable no-console */
+import useGetTrendData from "hooks/useGetTrendData";
+
 const Dashboard = () => {
-  return <div>대시보드페이지</div>;
+  let res = useGetTrendData();
+  console.log(res);
+
+  return (
+    <>
+      <span>통합 광고 현황</span>
+    </>
+  );
 };
 
 export default Dashboard;
