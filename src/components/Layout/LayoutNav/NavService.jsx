@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
+
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+
+import { SERVICE_TYPE } from "constants/ServiceType";
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 200px;
+  width: 230px;
 
-  margin-bottom: 50px;
+  margin: 0 10px 50px 0;
 `;
 
 const TitleWrapper = styled.div`
@@ -27,30 +33,28 @@ const TitleWrapper = styled.div`
   color: #94a2ad;
 `;
 
-const Service = styled.div`
-  > select {
-    padding: 20px 10px;
-    border: 1px solid #d1d8dc;
-    border-radius: 10px;
-    width: 100%;
-    margin-bottom: 53px;
-  }
-`;
-
-const TestOption = styled.option`
-  background-color: red;
-`;
-
 const NavService = () => {
+  const [option, setOption] = useState("매드업");
+  const handleChange = (e) => {
+    setOption(e.target.value);
+  };
+
   return (
     <Wrapper>
-      <Service>
-        <TitleWrapper>서비스</TitleWrapper>
-        <select>
-          <option>매드업</option>
-          <option>서비스 추가</option>
-        </select>
-      </Service>
+      <TitleWrapper>서비스</TitleWrapper>
+      <FormControl size="medium" sx={{ m: 1, minWidth: 120 }} fullWidth={true}>
+        <Select
+          onChange={handleChange}
+          value={option}
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          {SERVICE_TYPE.map(({ text }, idx) => (
+            <MenuItem key={idx} value={text}>
+              {text}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     </Wrapper>
   );
 };
