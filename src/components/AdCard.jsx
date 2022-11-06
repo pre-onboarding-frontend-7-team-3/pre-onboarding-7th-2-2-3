@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import { getAdvertisState } from "./atoms/advertis";
 
 const AdCard = ({ res }) => {
-  console.log("res card", res);
+  // console.log("res card", res);
   return (
     <CardContainer>
       <Title>웹광고_</Title>

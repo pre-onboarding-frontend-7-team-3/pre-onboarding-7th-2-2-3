@@ -3,30 +3,53 @@ import { getAdvertisState } from "components/atoms/advertis";
 import React from "react";
 import { useEffect, useState } from "react";
 
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 
 const Advertisement = () => {
   const getAd = useRecoilValue(getAdvertisState);
-  const [list, setList] = useState() || {};
+  const [cardData, setCardData] = useRecoilState(getAdvertisState);
+  console.log(cardData);
+  const cardType = {
+    ALL: "all",
+    ENDED: "ended",
+    ACTIVE: "active",
+  };
+  const [getCardType, setGetCardType] = useState(cardType.ALL);
+
   useEffect(() => {
     const getData = async () => {
       const res = await getAd();
-      setList(res);
+      setCardData(res);
     };
     getData();
   }, []);
-  /* eslint-disable no-console */
-  console.log(list);
-  /* eslint-disable no-console */
+
+  const getTypeDataHandler = async (event) => {
+    setGetCardType(event.target.ClassName);
+  };
+
+  const selectValue = cardData?.filter(({ status }) => {
+    return status === cardType;
+  });
 
   return (
     <>
-      {/* <div onClick={handlerGetData}>전체광고</div> */}
-      {list.ads?.map((res, idx) => {
-        console.log("res", res);
-        <AdCard key={idx} res={list} />;
-      })}
-      <AdCard />
+      <div className={cardType.ALL} onClick={getTypeDataHandler}>
+        전체
+      </div>
+      <div className={cardType.ENDED} onClick={getTypeDataHandler}>
+        중단됨
+      </div>
+      <div className={cardType.ACTIVE} onClick={getTypeDataHandler}>
+        진행중
+      </div>
+      {cardType.ALL === getCardType
+        ? cardData?.map((res) => {
+            return <AdCard key={res.id} res={res} />;
+          })
+        : selectValue?.map((res) => {
+            return <AdCard key={res.id} res={res} />;
+          })}
     </>
   );
 };
