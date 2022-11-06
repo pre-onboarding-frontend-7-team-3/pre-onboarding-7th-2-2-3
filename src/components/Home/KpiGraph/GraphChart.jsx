@@ -9,12 +9,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { dateConverterToKorean } from "utils/handleFormatDate";
-import { endDateAtom, startDateAtom } from "store/atoms/date";
+import { endDateAtom, startDateAtom } from "store/date";
 import { useRecoilValue } from "recoil";
 import { DataFormatter } from "utils/YAxisUnitFormatter";
 import { getDataBetweenDate } from "utils/getKPI";
-import { trendDataQuery } from "store/atoms/data";
-import { graphXAxisState } from "store/atoms/graphNav";
+import { trendDataQuery } from "store/trend";
+import { graphXAxisState } from "store/graphNav";
 
 function GraphChart() {
   const startDate = useRecoilValue(startDateAtom);
