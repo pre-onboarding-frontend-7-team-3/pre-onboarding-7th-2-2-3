@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
-import { adListFilterState } from "store/atoms/cards";
+import { adListFilterState } from "store/adList";
 import { useRecoilState } from "recoil";
 
 const AdManagementHeader = () => {

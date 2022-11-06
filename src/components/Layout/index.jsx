@@ -8,6 +8,63 @@ import LayoutNav from "./LayoutNav";
 import LayoutHeader from "./LayoutHeader";
 
 import Icon from "components/common/Icon";
+import { useLocation } from "react-router-dom";
+
+const Layout = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isToggled, setIsToggled] = useState(false);
+  const path = useLocation();
+
+  const navRef = useRef(null);
+  useOnClickOutside(navRef, () => {
+    setIsToggled(false);
+  });
+
+  const handleResize = _.debounce(() => {
+    if (window.innerWidth <= 768) {
+      setIsToggled(false);
+    }
+  }, 200);
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  useEffect(() => {
+    const delayRender = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+    return () => {
+      setIsLoading(true);
+      clearTimeout(delayRender);
+    };
+  }, [path, setIsLoading]);
+
+  return (
+    <Wrapper>
+      <HambargerBar
+        isToggled={isToggled}
+        onClick={() => {
+          setIsToggled(!isToggled);
+        }}
+      >
+        <Icon icon="SideNavToggle" size={30} />
+      </HambargerBar>
+      <SideNavContainer ref={navRef} isToggled={isToggled}>
+        <LayoutNav />
+      </SideNavContainer>
+      <ContentWrapper>
+        <LayoutHeader />
+        {isLoading ? <LoadingWrapper>loading</LoadingWrapper> : <>{children}</>}
+      </ContentWrapper>
+    </Wrapper>
+  );
+};
+
+export default Layout;
 
 const Wrapper = styled.div`
   display: flex;
@@ -46,48 +103,10 @@ const SideNavContainer = styled.div`
   }
 `;
 
-const Layout = ({ children }) => {
-  const [isToggled, setIsToggled] = useState(false);
-
-  const navRef = useRef(null);
-  useOnClickOutside(navRef, () => {
-    setIsToggled(false);
-  });
-
-  const handleResize = _.debounce(() => {
-    if (window.innerWidth <= 768) {
-      setIsToggled(false);
-    }
-  }, 200);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [handleResize]);
-
-  return (
-    <Wrapper>
-      <HambargerBar
-        isToggled={isToggled}
-        onClick={() => {
-          setIsToggled(!isToggled);
-        }}
-      >
-        <Icon icon="SideNavToggle" size={30} />
-      </HambargerBar>
-
-      <SideNavContainer ref={navRef} isToggled={isToggled}>
-        <LayoutNav />
-      </SideNavContainer>
-
-      <ContentWrapper>
-        <LayoutHeader />
-        {children};
-      </ContentWrapper>
-    </Wrapper>
-  );
-};
-
-export default Layout;
+const LoadingWrapper = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px 80px 0;
+`;

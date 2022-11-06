@@ -4,10 +4,9 @@ import styled from "@emotion/styled";
 import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { getKPI } from "utils/getKPI";
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
-import { endDateAtom, startDateAtom } from "store/atoms/date";
-import { trendDataQuery } from "store/atoms/data";
+import { endDateAtom, startDateAtom } from "store/date";
+import { trendDataQuery } from "store/trend";
 
-//
 export default function ComparePerformance() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);

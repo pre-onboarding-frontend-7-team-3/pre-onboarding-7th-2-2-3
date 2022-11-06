@@ -5,7 +5,7 @@ import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSha
 import { useRecoilValue } from "recoil";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { startDateAtom, endDateAtom } from "store/atoms/date";
+import { startDateAtom, endDateAtom } from "store/date";
 import { handleFormatDate } from "utils/handleFormatDate";
 
 const PageHeader = ({ title }) => {

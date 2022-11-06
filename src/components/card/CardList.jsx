@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Grid } from "@mui/material";
 import Card from "./Card";
-import PageHeader from "components/common/PageHeader";
-import { adListFilterQuery } from "store/atoms/cards";
+import { adListFilterQuery } from "store/adList";
 import AdManagementHeader from "components/AdManagement/AdManagementHeader";
 import { useRecoilValue } from "recoil";  
 
