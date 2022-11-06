@@ -7,6 +7,9 @@ import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
 import { endDateAtom, startDateAtom } from "store/date";
 import { trendDataQuery } from "store/trend";
 
+import { LoadingWrapper } from "components/Layout";
+import Spinner from "components/common/Spinner";
+
 export default function ComparePerformance() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);
@@ -26,7 +29,11 @@ export default function ComparePerformance() {
 
   return (
     <>
-      {state === "loading" && <div>loading</div>}
+      {state === "loading" && (
+        <LoadingWrapper>
+          <Spinner />
+        </LoadingWrapper>
+      )}
       {state === "hasValue" && kpiValues && (
         <Container>
           <ROAS value={kpiValues[0]?.roas} exValue={kpiValues[1]?.roas} />

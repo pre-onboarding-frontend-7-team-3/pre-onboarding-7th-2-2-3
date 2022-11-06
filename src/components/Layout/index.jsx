@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "@emotion/styled";
 import _ from "lodash";
 
@@ -6,9 +7,9 @@ import { useOnClickOutside } from "hooks/useOnClickOutside";
 
 import LayoutNav from "./LayoutNav";
 import LayoutHeader from "./LayoutHeader";
+import Spinner from "components/common/Spinner";
 
 import Icon from "components/common/Icon";
-import { useLocation } from "react-router-dom";
 
 const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,7 +59,13 @@ const Layout = ({ children }) => {
       </SideNavContainer>
       <ContentWrapper>
         <LayoutHeader />
-        {isLoading ? <LoadingWrapper>loading</LoadingWrapper> : <>{children}</>}
+        {isLoading ? (
+          <LoadingWrapper>
+            <Spinner />
+          </LoadingWrapper>
+        ) : (
+          <>{children}</>
+        )}
       </ContentWrapper>
     </Wrapper>
   );
@@ -103,7 +110,7 @@ const SideNavContainer = styled.div`
   }
 `;
 
-const LoadingWrapper = styled.section`
+export const LoadingWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
