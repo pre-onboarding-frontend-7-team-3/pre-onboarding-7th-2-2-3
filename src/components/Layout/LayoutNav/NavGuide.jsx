@@ -3,6 +3,20 @@ import styled from "@emotion/styled";
 
 import Icon from "components/common/Icon";
 
+const NavGuide = () => {
+  return (
+    <Wrapper>
+      <Icon icon="Guide" size="40" />
+      <TextWrapper>
+        <MainText>레버 이용 가이드</MainText>
+        <span>시작하기 전에 알아보기</span>
+      </TextWrapper>
+    </Wrapper>
+  );
+};
+
+export default NavGuide;
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -43,17 +57,3 @@ const MainText = styled.span`
   text-align: left;
   color: #3a474e;
 `;
-
-const NavGuide = () => {
-  return (
-    <Wrapper>
-      <Icon icon="Guide" size="40" />
-      <TextWrapper>
-        <MainText>레버 이용 가이드</MainText>
-        <span>시작하기 전에 알아보기</span>
-      </TextWrapper>
-    </Wrapper>
-  );
-};
-
-export default NavGuide;

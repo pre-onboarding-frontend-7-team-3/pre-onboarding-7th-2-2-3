@@ -1,10 +1,9 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import Home from "pages/Home";
+import Home from "pages/Home/Home";
 import AdManagement from "pages/AdManagement/AdManagement";
 import Layout from "components/Layout";
-import Spinner from "components/common/Spinner";
 
 const Router = () => {
   return (

@@ -1,9 +1,12 @@
+import { useRecoilValue } from "recoil";
 import styled from "styled-components";
-import { Grid } from "@mui/material";
-import Card from "./Card";
+
 import { adListFilterQuery } from "store/adList";
+
+import Card from "./Card";
 import AdManagementHeader from "components/AdManagement/AdManagementHeader";
-import { useRecoilValue } from "recoil";  
+
+import { Grid } from "@mui/material";
 
 const CardList = () => {
   const adList = useRecoilValue(adListFilterQuery);
