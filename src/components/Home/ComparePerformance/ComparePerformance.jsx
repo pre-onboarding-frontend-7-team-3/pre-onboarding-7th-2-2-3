@@ -7,10 +7,10 @@ import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
 import { endDateAtom, startDateAtom } from "store/atoms/date";
 import { trendDataQuery } from "store/atoms/data";
 
-// 
+//
 export default function ComparePerformance() {
-  const startDate = useRecoilValue(startDateAtom)
-  const endDate = useRecoilValue(endDateAtom)
+  const startDate = useRecoilValue(startDateAtom);
+  const endDate = useRecoilValue(endDateAtom);
 
   const { state, contents } = useRecoilValueLoadable(trendDataQuery);
   const [kpiValues, setKpiValues] = useState(null);

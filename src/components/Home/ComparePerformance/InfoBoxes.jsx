@@ -1,20 +1,20 @@
 import styled from "@emotion/styled";
 import React from "react";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
-import unitDecider from "utils/unitDecider";
+import numberUnitToKorean from "utils/numberUnitToKorean";
 
 export const ROAS = ({ value, exValue }) => {
   const diff = value - exValue;
   return (
     <InfoBoxWrapper>
-    <TitleBox>
-      <h3>ROAS</h3>
-      <p>{parseInt(value)}%</p>
+      <TitleBox>
+        <h3>ROAS</h3>
+        <p>{parseInt(value)}%</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
         {parseInt(Math.abs(diff))}%
-        </RightBox>
+      </RightBox>
     </InfoBoxWrapper>
   );
 };
@@ -23,13 +23,13 @@ export const Cost = ({ value, exValue }) => {
   return (
     <InfoBoxWrapper>
       <TitleBox>
-      <h3>광고비</h3>
-      <p>{unitDecider(parseInt(value))} 원</p>
+        <h3>광고비</h3>
+        <p>{numberUnitToKorean(parseInt(value))} 원</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(parseInt(diff)))} 원
-        </RightBox>
+        {numberUnitToKorean(Math.abs(parseInt(diff)))} 원
+      </RightBox>
     </InfoBoxWrapper>
   );
 };
@@ -38,14 +38,14 @@ export const Imp = ({ value, exValue }) => {
   const diff = value - exValue;
   return (
     <InfoBoxWrapper>
-    <TitleBox>
-      <h3>노출수</h3>
-      <p>{unitDecider(parseInt(value))} 회</p>
+      <TitleBox>
+        <h3>노출수</h3>
+        <p>{numberUnitToKorean(parseInt(value))} 회</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(parseInt(diff)))} 회
-        </RightBox>
+        {numberUnitToKorean(Math.abs(parseInt(diff)))} 회
+      </RightBox>
     </InfoBoxWrapper>
   );
 };
@@ -55,13 +55,13 @@ export const Click = ({ value, exValue }) => {
   return (
     <InfoBoxWrapper>
       <TitleBox>
-      <h3>클릭수</h3>
-      <p>{unitDecider(value)} 회</p>
+        <h3>클릭수</h3>
+        <p>{numberUnitToKorean(value)} 회</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(diff))} 회
-        </RightBox>
+        {numberUnitToKorean(Math.abs(diff))} 회
+      </RightBox>
     </InfoBoxWrapper>
   );
 };
@@ -86,26 +86,26 @@ export const Revenue = ({ value, exValue }) => {
     <InfoBoxWrapper>
       <TitleBox>
         <h3>매출</h3>
-        <p>{unitDecider(parseInt(value))} 원</p>
+        <p>{numberUnitToKorean(parseInt(value))} 원</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(diff))} 원
+        {numberUnitToKorean(Math.abs(diff))} 원
       </RightBox>
     </InfoBoxWrapper>
   );
 };
 
 const InfoBoxWrapper = styled.div`
-  border: 0.5px solid #EDEFF1;
-  border-radius: 10px;;
+  border: 0.5px solid #edeff1;
+  border-radius: 10px;
   margin: 10px;
   padding: 18px 40px;
   position: relative;
   div {
     float: left;
   }
-  z-index:-1;
+  z-index: -1;
 `;
 const TitleBox = styled.div`
   h3 {
