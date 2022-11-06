@@ -72,13 +72,13 @@ const ModalWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 710px;
   position: absolute;
-  margin-top: 465px;
-  margin-right: 40px;
+  width: 660px;
+  margin: 460px 40px 0 0;
   right: 0;
   border-radius: 5px;
   box-shadow: 2px 0px 10px -1px rgb(229, 229, 229);
+  z-index: 99;
 `;
 
 const ButtonWrapper = styled.div`

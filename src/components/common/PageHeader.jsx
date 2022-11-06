@@ -38,14 +38,11 @@ const PageHeader = ({ title }) => {
 export default PageHeader;
 
 const PageHeaderWrapper = styled.div`
-  display: flex;
+  ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
-  align-items: center;
   height: 80px;
   margin: 0 40px;
   border-bottom: 1px solid #edeff1;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 900;
   font-size: 26px;
   color: #3a474e;
@@ -53,7 +50,7 @@ const PageHeaderWrapper = styled.div`
 
 const PageTitle = styled.div`
   font-weight: 900;
-  font-size: 26p;
+  font-size: 26px;
 `;
 
 const DateRangeContainer = styled.div``;

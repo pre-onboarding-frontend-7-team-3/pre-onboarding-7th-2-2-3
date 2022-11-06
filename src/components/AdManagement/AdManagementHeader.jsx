@@ -8,10 +8,10 @@ import { adListFilterState } from "store/atoms/cards";
 import { useRecoilState } from "recoil";
 
 const AdManagementHeader = () => {
-  const [filter, setFilter] = useRecoilState(adListFilterState);
+  const [adListFilter, setAdListFilter] = useRecoilState(adListFilterState);
 
   const handleChange = (e) => {
-    setFilter(e.target.value);
+    setAdListFilter(e.target.value);
   };
 
   const customStyle = {
@@ -23,6 +23,7 @@ const AdManagementHeader = () => {
       fontSize: "14px",
     },
     menuItem: {
+      width: "100px",
       fontWeight: "500",
       fontSize: "14px",
     },
@@ -41,7 +42,7 @@ const AdManagementHeader = () => {
       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
         <Select
           onChange={handleChange}
-          value={filter}
+          value={adListFilter}
           inputProps={{ "aria-label": "Without label" }}
           sx={customStyle.select}
         >
@@ -62,8 +63,7 @@ const AdManagementHeader = () => {
 export default AdManagementHeader;
 
 const HeaderWrapper = styled.div`
-  display: flex;
+  ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
-  align-items: center;
   height: 80px;
 `;
