@@ -1,13 +1,14 @@
-// eslint-disable-next-line no-unused-vars
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import CardList from "components/card/CardList";
+import { RecoilRoot } from "recoil";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <RecoilRoot>
       <Routes>
-        {/* <Route path="/" element={<Dashboard />} /> */}
+        <Route path="/" element={<CardList />} />
       </Routes>
-    </BrowserRouter>
+    </RecoilRoot>
   );
 };
 
