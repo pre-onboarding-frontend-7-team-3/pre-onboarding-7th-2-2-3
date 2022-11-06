@@ -3,8 +3,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelecData";
-import { adListFilterState } from "store/atoms/recoil";
+import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
+import { adListFilterState } from "store/atoms/cards";
 import { useRecoilState } from "recoil";
 
 const AdManagementHeader = () => {
