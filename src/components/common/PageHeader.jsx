@@ -26,14 +26,18 @@ const PageHeader = ({ title }) => {
   return (
     <PageHeaderWrapper>
       <PageTitle>{title}</PageTitle>
-      <DateRangeContainer onClick={handleToggleDateRangePicker}>
-        <FlexBox>
-          {DateRange}
-          <KeyboardArrowDownSharpIcon fontSize="large" />
-        </FlexBox>
-      </DateRangeContainer>
-      {isShowDateRangePicker && (
-        <DateRangeModal handleToggleDateRangePicker={handleToggleDateRangePicker} />
+      {title === "대시보드" && (
+        <>
+          <DateRangeContainer onClick={handleToggleDateRangePicker}>
+            <FlexBox>
+              {DateRange}
+              <KeyboardArrowDownSharpIcon fontSize="large" />
+            </FlexBox>
+          </DateRangeContainer>
+          {isShowDateRangePicker && (
+            <DateRangeModal handleToggleDateRangePicker={handleToggleDateRangePicker} />
+          )}
+        </>
       )}
     </PageHeaderWrapper>
   );

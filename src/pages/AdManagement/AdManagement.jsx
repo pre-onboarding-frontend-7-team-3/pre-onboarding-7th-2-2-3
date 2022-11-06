@@ -8,7 +8,7 @@ const AdManagement = () => {
   return (
     <>
       {/* <SEO title={PAGE_HEADER_TITLE.AD_MANAGEMENT} /> */}
-      {/* <PageHeader title={PAGE_HEADER_TITLE.AD_MANAGEMENT} /> */}
+      <PageHeader title={PAGE_HEADER_TITLE.AD_MANAGEMENT} />
       <CardList />
     </>
   );
