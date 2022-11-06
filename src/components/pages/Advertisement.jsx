@@ -26,11 +26,11 @@ const Advertisement = () => {
   }, []);
 
   const getTypeDataHandler = async (event) => {
-    setGetCardType(event.target.ClassName);
+    setGetCardType(event.target.value);
   };
 
-  const selectValue = cardData?.ads?.filter(({ status }) => {
-    return status === cardType;
+  const selectValue = cardData?.ads?.filter(({ status }, event) => {
+    return status === getCardType;
   });
 
   return (
@@ -38,15 +38,11 @@ const Advertisement = () => {
       <Container>
         <Header />
         <Wrap>
-          <div className={cardType.ALL} onClick={getTypeDataHandler}>
-            전체
-          </div>
-          <div className={cardType.ENDED} onClick={getTypeDataHandler}>
-            중단됨
-          </div>
-          <div className={cardType.ACTIVE} onClick={getTypeDataHandler}>
-            진행중
-          </div>
+          <select onChange={getTypeDataHandler}>
+            <option value="all">전체</option>
+            <option value="ended">중단됨</option>
+            <option value="active">전체</option>
+          </select>
           <div style={{ display: "flex", overflowY: "scoll" }}>
             {cardType.ALL === getCardType
               ? cardData?.ads?.map((res) => {
