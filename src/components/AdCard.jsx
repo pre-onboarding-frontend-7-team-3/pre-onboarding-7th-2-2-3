@@ -34,11 +34,11 @@ const AdCard = ({ res }) => {
       </Title>
       <InfoContainer>
         <InfoWrap>
-          <span>상태</span>
+          <div>상태</div>
           <p>{res?.status === "active" ? "진행중" : "종료"}</p>
         </InfoWrap>
         <InfoWrap>
-          <span>광고 생성일</span>
+          <div>광고 생성일</div>
           <p>
             {res?.status === "active"
               ? splitDate(res?.startDate)
@@ -46,19 +46,19 @@ const AdCard = ({ res }) => {
           </p>
         </InfoWrap>
         <InfoWrap>
-          <span>일 희망 예산</span>
+          <div>일 희망 예산</div>
           <p>{unit(res?.budget)}</p>
         </InfoWrap>
         <InfoWrap>
-          <span>광고 수익률</span>
+          <div>광고 수익률</div>
           <p>{res?.report?.roas}%</p>
         </InfoWrap>
         <InfoWrap>
-          <span>매출</span>
+          <div>매출</div>
           <p>{sales(res?.report?.convValue) + " 만원"}</p>
         </InfoWrap>
         <InfoWrap>
-          <span>광고 비용</span>
+          <div>광고 비용</div>
           <p>{sales(res?.report?.cost) + " 만원"}</p>
         </InfoWrap>
       </InfoContainer>
@@ -97,7 +97,8 @@ const InfoWrap = styled.div`
   height: 30px;
   border-top: 1px solid #94a2ad;
   font-size: 15px;
-  span {
+  div {
+    width: 100px;
     text-align: left;
     color: #94a2ad;
     margin: 8px;
@@ -105,8 +106,7 @@ const InfoWrap = styled.div`
   }
 
   p {
-    /* position: absolute;
-    left: 200px;
-    margin-top: 8px; */
+    text-align: left;
+    margin: 8px 0;
   }
 `;

@@ -37,7 +37,7 @@ const Advertisement = () => {
             <option value="ended">중단됨</option>
             <option value="active">진행중</option>
           </SelectBox>
-          <div style={{ display: "flex", overflowY: "scoll" }}>
+          <CardDiv style={{ display: "flex", overflowY: "scoll" }}>
             {"all" === getCardType
               ? cardData?.ads?.map((res) => {
                   return <AdCard key={res.id} res={res} />;
@@ -45,7 +45,7 @@ const Advertisement = () => {
               : selectValue?.map((res) => {
                   return <AdCard key={res.id} res={res} />;
                 })}
-          </div>
+          </CardDiv>
         </Wrap>
       </Container>
     </>
@@ -56,9 +56,19 @@ export default Advertisement;
 
 const Container = styled.div`
   display: flex;
+  width: 1035px;
+  /* width: 100%;
+  height: auto;
+  overflow-y: scroll; */
 `;
 
 const Wrap = styled.div``;
+
+const CardDiv = styled.div`
+  height: 800px;
+  width: 1000px;
+  overflow-y: scroll;
+`;
 
 const SelectBox = styled.select`
   margin-top: 50px;
