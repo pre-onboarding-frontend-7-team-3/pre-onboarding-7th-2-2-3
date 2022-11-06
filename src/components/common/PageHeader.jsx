@@ -5,13 +5,13 @@ import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSha
 import { useRecoilValue } from "recoil";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { startDate, endDate } from "store/atoms/date";
+import { startDateAtom, endDateAtom } from "store/atoms/date";
 import { handleFormatDate } from "utils/handleFormatDate";
 
 const PageHeader = ({ title }) => {
   const [isShowDateRangePicker, setIsShowDateRangePicker] = useState(false);
-  const initialStartDate = useRecoilValue(startDate);
-  const initialEndDate = useRecoilValue(endDate);
+  const initialStartDate = useRecoilValue(startDateAtom);
+  const initialEndDate = useRecoilValue(endDateAtom);
 
   const DateRange = handleFormatDate(initialStartDate, initialEndDate);
 

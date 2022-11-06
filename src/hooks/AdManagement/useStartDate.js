@@ -1,8 +1,8 @@
 import { useRecoilState } from "recoil";
-import { startDate } from "store/atoms/date";
+import { startDateAtom } from "store/atoms/date";
 
 export const useStartDate = () => {
-  const [initialStartDate, setInitialStartDate] = useRecoilState(startDate);
+  const [initialStartDate, setInitialStartDate] = useRecoilState(startDateAtom);
 
   return { initialStartDate, setInitialStartDate };
 };
