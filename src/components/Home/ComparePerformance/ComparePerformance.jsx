@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
+
 import { useRecoilValue, useRecoilValueLoadable } from "recoil";
-import {  trendDataQuery } from "store/atoms/kpi";
 import { getKPI } from "utils/getKPI";
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
 import { endDateAtom, startDateAtom } from "store/atoms/date";
+import { trendDataQuery } from "store/atoms/data";
 
 // 
 export default function ComparePerformance() {

@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import Card from "./Card";
 import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
-import { cardsState } from "../../store/atoms/addFilter";
-import { useRecoilState } from "recoil";
 import { cardTypeState } from "../../store/atoms/addFilter";
-import { CARD_STATUS } from "../../constants/CardStatusData";
+import { cardsState } from "store/atoms/cards";
+import { useRecoilState } from "recoil";
+import { CARD_STATUS } from "constants/AdManagementSelectData";
 
 const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);
