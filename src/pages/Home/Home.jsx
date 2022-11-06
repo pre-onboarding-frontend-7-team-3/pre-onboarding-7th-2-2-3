@@ -6,8 +6,8 @@ import React from "react";
 const Home = () => {
   return (
     <>
-    <PageHeader />
-        <ComparePerformance />
+      <PageHeader />
+      <ComparePerformance />
       <CompareGraph />
     </>
   );

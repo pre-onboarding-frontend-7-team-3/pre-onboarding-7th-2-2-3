@@ -16,7 +16,7 @@ function CompareGraph() {
   const [graphDateRange, setGraphDateRange] = useRecoilState(graphDateRangeState);
 
   return (
-    <>
+    <GraphWrapper>
       <NavWrapper>
         <XAxisIndexWrapper>
           <DropDown
@@ -40,11 +40,15 @@ function CompareGraph() {
         />
       </NavWrapper>
       <GraphChart />
-    </>
+    </GraphWrapper>
   );
 }
 
-const NavWrapper = styled.section`
+const GraphWrapper = styled.section`
+  height: 40vh;
+`;
+
+const NavWrapper = styled.nav`
   ${centerize}
   justify-content: space-between;
 `;
