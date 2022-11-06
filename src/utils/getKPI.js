@@ -1,11 +1,23 @@
-export const getKPI = (trendData, startDate, endDate) => {
-  const startPoint = trendData.findIndex((data) => {
-    if (startDate.getTime() === new Date(data.date).getTime()) {
-      return true;
-    }
-  });
+const treatAsUTC = (date) => {
+  var result = new Date(date);
+  result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
+  return result;
+};
 
-  const diffOfdate = startDate.getDate() - endDate.getDate() + 1;
+const daysBetween = (d1, d2) => {
+  var millisecondsPerDay = 24 * 60 * 60 * 1000;
+  const a = Math.ceil(
+    Math.abs(treatAsUTC(d1).setHours(0, 0, 0, 0) - treatAsUTC(d2).setHours(0, 0, 0, 0)) /
+      millisecondsPerDay,
+  );
+  console.log(a, d1, d2);
+  return a;
+};
+
+export const getKPI = (trendData, startDate, endDate) => {
+  const startPoint = trendData.findIndex((data) => daysBetween(new Date(data.date), startDate) < 1);
+
+  const diffOfdate = daysBetween(startDate, endDate);
 
   const KPIs = {
     roas: 0, //ROAS
@@ -25,13 +37,12 @@ export const getKPI = (trendData, startDate, endDate) => {
     revenue: 0,
   };
 
-  const A = trendData.slice(startPoint, startPoint + diffOfdate);
-  const B = trendData.slice(startPoint - diffOfdate - 1, startPoint - 1);
-
-  for (let i = 0; i < diffOfdate; i++) {
+  const KPIdataForComparison = trendData.slice(startPoint, startPoint + diffOfdate + 1);
+  const exKPIdataForComparison = trendData.slice(startPoint - diffOfdate - 1, startPoint);
+  for (let i = 0; i <= diffOfdate; i++) {
     for (let key of Object.keys(KPIs)) {
-      KPIs[key] += A[i][key];
-      exKPIs[key] += B[i][key];
+      KPIs[key] += KPIdataForComparison[i][key];
+      exKPIs[key] += exKPIdataForComparison[i][key];
     }
   }
   return [KPIs, exKPIs];
