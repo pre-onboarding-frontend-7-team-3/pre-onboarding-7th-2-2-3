@@ -1,18 +1,17 @@
-import { useState } from "react";
 import { Box } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import { AD_MANAGEMENT_DATA } from "constants/AdManagementSelectData";
-import { CREATE_AD } from "constants/AdManagementSelectData";
+import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
+import { adListFilterState } from "store/atoms/cards";
+import { useRecoilState } from "recoil";
 
 const AdManagementHeader = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [adStatus, setAdStatus] = useState(AD_MANAGEMENT_DATA[0].name);
+  const [filter, setFilter] = useRecoilState(adListFilterState);
 
   const handleChange = (e) => {
-    setAdStatus(e.target.value);
+    setFilter(e.target.value);
   };
 
   return (
@@ -36,7 +35,7 @@ const AdManagementHeader = () => {
             fontSize: "14px",
           }}
         >
-          {AD_MANAGEMENT_DATA.map(({ name }, idx) => (
+          {AD_MANAGEMENT_DATA.map(({ name, status }, idx) => (
             <MenuItem
               key={idx}
               value={name}
