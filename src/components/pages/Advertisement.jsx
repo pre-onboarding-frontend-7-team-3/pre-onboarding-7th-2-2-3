@@ -29,7 +29,7 @@ const Advertisement = () => {
     setGetCardType(event.target.value);
   };
 
-  const selectValue = cardData?.ads?.filter(({ status }, event) => {
+  const selectValue = cardData?.ads?.filter(({ status }) => {
     return status === getCardType;
   });
 
@@ -38,11 +38,11 @@ const Advertisement = () => {
       <Container>
         <Header />
         <Wrap>
-          <select onChange={getTypeDataHandler}>
+          <SelectBox onChange={getTypeDataHandler}>
             <option value="all">전체</option>
             <option value="ended">중단됨</option>
-            <option value="active">전체</option>
-          </select>
+            <option value="active">진행중</option>
+          </SelectBox>
           <div style={{ display: "flex", overflowY: "scoll" }}>
             {cardType.ALL === getCardType
               ? cardData?.ads?.map((res) => {
@@ -65,3 +65,10 @@ const Container = styled.div`
 `;
 
 const Wrap = styled.div``;
+
+const SelectBox = styled.select`
+  margin-top: 50px;
+  width: 125px;
+  height: 45px;
+  border-radius: 10px;
+`;
