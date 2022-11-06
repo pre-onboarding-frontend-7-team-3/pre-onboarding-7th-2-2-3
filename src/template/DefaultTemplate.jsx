@@ -23,6 +23,8 @@ const Container = styled.div`
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background: #f6f7f8;
 `;
 
 export default DefaultTemplate;
