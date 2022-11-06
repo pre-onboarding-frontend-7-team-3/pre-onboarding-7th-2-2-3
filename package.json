@@ -30,6 +30,7 @@
   },
   "scripts": {
     "heroku-prebuild": "npm i --only=production --ignore-scripts && npm run build",
+    "heroku-postbuild": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "start": "node server",
     "build": "react-scripts build",
     "test": "react-scripts test",
