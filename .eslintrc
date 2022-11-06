@@ -1,0 +1,12 @@
+{
+  "extends": ["prettier", "react-app", "eslint:recommended"],
+  "rules": {
+    "no-console": ["error", { "allow": ["error"] }],
+    "no-unused-vars": "off",
+    "curly": "error"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  }
+}

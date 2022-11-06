@@ -21,10 +21,7 @@ function GraphChart() {
   const endDate = useRecoilValue(endDateAtom);
   const trendData = useRecoilValue(trendDataQuery);
   const navOption = useRecoilValue(graphXAxisState);
-  console.log("startDate", startDate);
-  console.log("endDate", endDate);
   const { KPIdataForComparison: data } = getDataBetweenDate(trendData, startDate, endDate);
-  // console.log(data);
 
   return (
     <ResponsiveContainer width="100%" height="100%">
