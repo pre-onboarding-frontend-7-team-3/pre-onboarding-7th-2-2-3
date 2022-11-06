@@ -14,8 +14,7 @@ const Wrapper = styled.div`
   width: 220px;
   height: auto;
 
-  padding-left: 10px;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 `;
 
 const TitleWrapper = styled.div`
@@ -23,8 +22,7 @@ const TitleWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  padding-left: 5px;
-  margin: 0 0 10px 10px;
+  margin: 0 0 10px 5px;
 
   font-family: Roboto;
   font-size: 12px;

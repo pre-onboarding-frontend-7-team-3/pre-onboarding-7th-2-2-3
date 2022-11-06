@@ -21,7 +21,7 @@ const PageHeader = ({ title }) => {
 
   return (
     <PageHeaderWrapper>
-      <PageTitle>title{title}</PageTitle>
+      <PageTitle>{title}</PageTitle>
       <DateRangeContainer onClick={handleToggleDateRangePicker}>
         <FlexBox>
           {DateRange}
