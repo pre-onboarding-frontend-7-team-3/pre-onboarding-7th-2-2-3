@@ -42,7 +42,7 @@ const DateRangeModal = ({ handleToggleDateRangePicker }) => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "flex-end",
-        width: "950px",
+        width: "710px",
         position: "absolute",
         marginTop: "465px",
         marginRight: "40px",
