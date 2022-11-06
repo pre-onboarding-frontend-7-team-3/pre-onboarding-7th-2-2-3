@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import Home from "pages/Home";
+import Home from "pages/home/Home";
 import AdManagement from "pages/AdManagement/AdManagement";
 import Layout from "components/Layout";
 

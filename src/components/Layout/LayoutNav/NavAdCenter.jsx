@@ -1,6 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import { AD_CENTER_TYPE } from "constants/AdCenterType";
@@ -56,6 +55,11 @@ const ItemWrapper = styled(NavLink)`
 
     color: #586cf5;
     background: #edeff1;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    background-color: #edeff1;
     border-radius: 10px;
   }
 
