@@ -10,19 +10,13 @@ const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);
   const [cardType, setCardType] = useState(CARD_STATUS.ALL);
 
-  const getAllData = () => {
-    cardsAxios().then((res) => setCardDatas(res.data.ads));
-  };
-
   useEffect(() => {
-    getAllData();
+    cardsAxios().then((res) => setCardDatas(res.data.ads));
   }, []);
 
   const targetValue = cardDatas.filter(({ status }) => {
     return status === cardType;
   });
-
-  console.log("타겟벨류", targetValue);
 
   const getData = async (e) => {
     setCardType(e.target.className);
@@ -46,7 +40,7 @@ const CardList = () => {
             ? cardDatas.map((cardData) => {
                 return <Card key={cardData.id} cardData={cardData} />;
               })
-            : targetValue?.map((cardData) => {
+            : targetValue.map((cardData) => {
                 return <Card key={cardData.id} cardData={cardData} />;
               })}
         </Grid>

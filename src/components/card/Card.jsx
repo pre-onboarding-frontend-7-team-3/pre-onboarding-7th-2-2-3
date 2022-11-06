@@ -1,12 +1,12 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
-import { Box, Grid, Table } from "@mui/material";
+import { Box, Grid, Table, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-import { Typography } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-// import { getDateConvert } from "utils/getDateCovert";
+import { getDateCovert } from "utils/getDateCovert";
+import { vaildateCost } from "utils/vaildateCost";
 
 const Card = ({ cardData }) => {
   function createData(name, description) {
@@ -14,15 +14,14 @@ const Card = ({ cardData }) => {
   }
 
   const rows = [
-    createData("상태", cardData?.status),
-    createData("광고 생성일", cardData?.startDate),
-    createData("일 희망 예산", cardData?.budget),
-    createData("광고 수익률", cardData?.report.roas),
-    createData("매출", cardData?.report.convValue),
-    createData("광고 비용", cardData?.report.cost),
+    createData("상태", cardData.status),
+    createData("광고 생성일", getDateCovert(cardData.startDate)),
+    createData("일 희망 예산", vaildateCost(cardData.budget)),
+    createData("광고 수익률", cardData.report.roas + "%"),
+    createData("매출", vaildateCost(cardData.report.convValue)),
+    createData("광고 비용", vaildateCost(cardData.report.cost)),
   ];
 
-  // adData.status === "ended" ? adData.status + "(" + adData.endDate + ")" : adData.status;
   return (
     <Grid item xs={4}>
       <Paper
@@ -51,6 +50,7 @@ const Card = ({ cardData }) => {
               lineHeight: "19px",
               color: "#3A474E",
               marginBottom: "40px",
+              marginLeft: "20px",
             }}
           >
             {cardData.title}
@@ -62,7 +62,7 @@ const Card = ({ cardData }) => {
                   <TableCell
                     component="th"
                     scope="row"
-                    sx={{ fontWeight: "500", fontSize: "12px" }}
+                    sx={{ fontWeight: 500, fontSize: "12px", color: "#94A2AD" }}
                   >
                     {row.name}
                   </TableCell>
