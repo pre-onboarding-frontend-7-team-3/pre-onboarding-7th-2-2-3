@@ -1,13 +1,15 @@
+import { getEveryDayAdResults } from "store/atoms/getEveryDayAdResults";
+import Graph from "components/Graph";
 import { useRecoilValue } from "recoil";
-import { getAdvertismentState } from "atoms/advertisment";
 
 function DashBoard() {
-  const getAdvertisment = useRecoilValue(getAdvertismentState);
-  const handleGetAdvertisment = async () => {
-    const result = await getAdvertisment("/trend_data/1");
-    console.log(result);
-  };
-  return <div onClick={handleGetAdvertisment}>dashboard</div>;
+  // const { count, totalAds } = useRecoilValue(getEveryDayAdResults);
+
+  return (
+    <>
+      <Graph />
+    </>
+  );
 }
 
 export default DashBoard;
