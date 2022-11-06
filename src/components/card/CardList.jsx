@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Card from "./Card";
 import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
+import { cardTypeState } from "../../store/atoms/addFilter";
 import { cardsState } from "store/atoms/cards";
 import { useRecoilState } from "recoil";
-import { CARD_STATUS } from "constants/AdManagementSelecData";
+import { CARD_STATUS } from "constants/AdManagementSelectData";
 
 const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);
-  const [cardType, setCardType] = useState(CARD_STATUS.ALL);
+  const [cardType, setCardType] = useRecoilState(cardTypeState);
 
   useEffect(() => {
     cardsAxios().then((res) => setCardDatas(res.data.ads));
@@ -18,7 +19,7 @@ const CardList = () => {
     return status === cardType;
   });
 
-  const getData = async (e) => {
+  const getData = (e) => {
     setCardType(e.target.className);
   };
 
@@ -33,9 +34,9 @@ const CardList = () => {
       <div className={CARD_STATUS.ACTIVE} onClick={getData}>
         진행중
       </div>
-      <div style={{ height: "40px" }} />
+      <div style={{ height: "20px" }} />
       <div style={{ width: "1020px", top: "0", left: "0" }}>
-        <Grid container spacing={3} gap="px">
+        <Grid container spacing={3}>
           {cardType === CARD_STATUS.ALL
             ? cardDatas.map((cardData) => {
                 return <Card key={cardData.id} cardData={cardData} />;

@@ -4,8 +4,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import { AD_MANAGEMENT_DATA } from "constants/AdManagementSelecData";
-import { CREATE_AD } from "constants/AdManagementSelecData";
+import { AD_MANAGEMENT_DATA } from "constants/AdManagementSelectData";
+import { CREATE_AD } from "constants/AdManagementSelectData";
 
 const AdManagementHeader = () => {
   // eslint-disable-next-line no-unused-vars
