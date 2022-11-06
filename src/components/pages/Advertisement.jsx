@@ -9,12 +9,6 @@ import styled from "styled-components";
 const Advertisement = () => {
   const getAd = useRecoilValue(getAdvertisState);
   const [cardData, setCardData] = useRecoilState(getAdvertisState) || {};
-
-  const cardType = {
-    ALL: "all",
-    ENDED: "ended",
-    ACTIVE: "active",
-  };
   const [getCardType, setGetCardType] = useRecoilState(getAdStatus);
 
   useEffect(() => {
@@ -44,7 +38,7 @@ const Advertisement = () => {
             <option value="active">진행중</option>
           </SelectBox>
           <div style={{ display: "flex", overflowY: "scoll" }}>
-            {cardType.ALL === getCardType
+            {"all" === getCardType
               ? cardData?.ads?.map((res) => {
                   return <AdCard key={res.id} res={res} />;
                 })
