@@ -1,13 +1,17 @@
-import styled from "styled-components";
-import { centerize } from "shared/GlobalStyle";
-import DropDown from "components/dropDown";
 import { useRecoilState, useRecoilValue } from "recoil";
+import styled from "styled-components";
+
 import {
   graphDateRangeState,
   graphXAxisState,
   menuItemsWithOutFirstState,
 } from "store/atoms/graphNav";
+
 import { GRAPH_RANGE_DAY_MENU_ITEM, GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
+
+import DropDown from "components/DropDown";
+
+import { centerize } from "shared/GlobalStyle";
 
 function CompareGraph() {
   const [graphXAxis, setGraphXAxis] = useRecoilState(graphXAxisState);

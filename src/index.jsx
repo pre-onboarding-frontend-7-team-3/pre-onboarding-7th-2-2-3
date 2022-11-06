@@ -1,8 +1,10 @@
-import ReactDOM from "react-dom/client";
 import React from "react";
-import App from "./App";
-import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from "react-dom/client";
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import App from "./App";
+
 import { GlobalStyle } from "shared/GlobalStyle";
 import theme from "shared/theme";
 

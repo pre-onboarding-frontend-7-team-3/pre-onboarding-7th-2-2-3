@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 
+import { SERVICE_TYPE } from "constants/ServiceType";
+
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-
-import { SERVICE_TYPE } from "constants/ServiceType";
 
 const Wrapper = styled.div`
   display: flex;
