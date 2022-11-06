@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
 import { cardsState } from "store/atoms/recoil";
 import { useRecoilState } from "recoil";
-import { CARD_STATUS } from "constants/CardStatusData";
+import { CARD_STATUS } from "constants/AdManagementSelecData";
 
 const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);
