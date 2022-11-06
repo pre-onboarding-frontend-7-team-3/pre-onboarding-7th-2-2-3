@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { useRecoilState, useRecoilValueLoadable } from "recoil";
-import { dateState, trendDataQuery } from "store/atoms/kpi";
+import { dateState } from "store/atoms/kpi";
 import { getKPI } from "utils/getKPI";
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
+import { trendDataQuery } from "store/atoms/data";
 
 export default function ComparePerformance() {
   const [{ startDate, endDate }] = useRecoilState(dateState);

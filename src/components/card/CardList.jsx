@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
-import { cardsState } from "store/atoms/recoil";
+import { cardsState } from "store/atoms/cards";
 import { useRecoilState } from "recoil";
 import { CARD_STATUS } from "constants/AdManagementSelecData";
 
