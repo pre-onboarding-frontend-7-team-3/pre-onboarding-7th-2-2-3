@@ -105,9 +105,9 @@ const InfoBoxWrapper = styled.div`
   div {
     float: left;
   }
+  z-index:-1;
 `;
 const TitleBox = styled.div`
-  
   h3 {
     color: #94a2ad;
     font-weight: 500;
