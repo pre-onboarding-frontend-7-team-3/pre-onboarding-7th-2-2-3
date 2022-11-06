@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
-import { cardsState } from "recoil/recoil";
+import { cardsState } from "store/atoms/recoil";
 import { useRecoilState } from "recoil";
-import { CARD_STATUS } from "CONSTANT_DATA/CARD_STATUS";
+import { CARD_STATUS } from "constants/CardStatusData";
 
 const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);

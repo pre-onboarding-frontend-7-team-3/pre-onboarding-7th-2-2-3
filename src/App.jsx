@@ -1,19 +1,18 @@
-import Home from "pages/Home";
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import CardList from "components/card/CardList";
 import { RecoilRoot } from "recoil";
+import CardList from "components/card/CardList";
+import Home from "pages/Home";
 
-function App() {
+const Router = () => {
   return (
     <RecoilRoot>
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/ads" element={<CardList />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/ads" element={<CardList />} />
         <Route />
       </Routes>
     </RecoilRoot>
   );
-}
+};
 
-export default App;
+export default Router;
