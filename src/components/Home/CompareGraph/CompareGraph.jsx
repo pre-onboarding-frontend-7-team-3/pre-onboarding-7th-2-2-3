@@ -8,6 +8,7 @@ import {
   menuItemsWithOutFirstState,
 } from "store/atoms/graphNav";
 import { GRAPH_RANGE_DAY_MENU_ITEM, GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
+import GraphChart from "./GraphChart";
 
 function CompareGraph() {
   const [graphXAxis, setGraphXAxis] = useRecoilState(graphXAxisState);
@@ -38,6 +39,7 @@ function CompareGraph() {
           menuItems={GRAPH_RANGE_DAY_MENU_ITEM}
         />
       </NavWrapper>
+      <GraphChart />
     </>
   );
 }
