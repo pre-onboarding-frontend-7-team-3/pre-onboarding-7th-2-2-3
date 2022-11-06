@@ -28,7 +28,7 @@ const AdManagementHeader = () => {
       fontSize: "14px",
     },
     button: {
-      width: "108px",
+      minWidth: "108px",
       height: "40px",
       padding: "12px 20px",
       color: "#FFFFFF",
