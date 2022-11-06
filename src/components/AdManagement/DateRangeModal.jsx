@@ -59,7 +59,7 @@ const DateRangeModal = ({ handleToggleDateRangePicker }) => {
         showDateDisplay={false}
         howDateDisplay={false}
         moveRangeOnFirstSelection={false}
-        showDateDisplay={false}
+        // showDateDisplay={false}
         monthDisplayFormat="YYY년 MM월"
         inputRanges={[]}
         months={2}
