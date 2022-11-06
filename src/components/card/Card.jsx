@@ -1,26 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import { Box, Grid, Table, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { getDateCovert } from "utils/getDateCovert";
+import { dateCovert } from "utils/dateCovert";
 import { vaildateCost } from "utils/vaildateCost";
 
 const Card = ({ cardData }) => {
+  const [toogle, setToogle] = useState(false);
+  const statusModify = toogle ? "수정 완료" : "수정 하기";
+
+  // const inputProps = toogle
+  //   ? { readOnly: true }
+  //   : {
+  //       onChange: (e) => {
+  //         console.log(111);
+  //         UpdateValue(e, idx);
+  //       },
+  //     };
+
   function createData(name, description) {
+    if (description === "active") {
+      description = "진행중";
+    } else if (description === "ended") {
+      description = "중단됨";
+    }
     return { name, description };
   }
 
+  const ModifyProps = !toogle
+    ? {
+        onClick: () => {
+          setToogle(true);
+        },
+      }
+    : {
+        onClick: (e) => {
+          window.location.reload();
+        },
+      };
+
   const rows = [
     createData("상태", cardData.status),
-    createData("광고 생성일", getDateCovert(cardData.startDate)),
+    createData("광고 생성일", dateCovert(cardData.startDate)),
     createData("일 희망 예산", vaildateCost(cardData.budget)),
     createData("광고 수익률", cardData.report.roas + "%"),
     createData("매출", vaildateCost(cardData.report.convValue)),
     createData("광고 비용", vaildateCost(cardData.report.cost)),
   ];
+
+  // const UpdateValue = (e, idx) => {
+  //   cardData((pre) =>
+  //     pre.map((el) => {
+  //       if (el.id === idx) {
+  //         el = e.target.value;
+  //       }
+  //       return el;
+  //     }),
+  //   );
+  // };
 
   return (
     <Grid item xs={4}>
@@ -66,12 +106,24 @@ const Card = ({ cardData }) => {
                   >
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">
+                    <input
+                      style={{
+                        webkitAppearance: "none",
+                        mozAppearance: "none",
+                        appearance: "none",
+                      }}
+                      // {...inputProps}
+                      value={row.description}
+                      idx={row.idx}
+                    />
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
           <Button
+            onClick={() => ModifyProps()}
             variant="outlined"
             sx={{
               width: "92px",
@@ -83,7 +135,7 @@ const Card = ({ cardData }) => {
               border: "1 solid black",
             }}
           >
-            수정하기
+            {statusModify}
           </Button>
         </Box>
       </Paper>

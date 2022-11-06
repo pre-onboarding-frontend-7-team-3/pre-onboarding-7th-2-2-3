@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Grid } from "@mui/material";
 import { cardsAxios } from "apis/cardsApi";
-import { cardsState } from "store/atoms/recoil";
+import { cardsState } from "recoil/recoil";
 import { useRecoilState } from "recoil";
-import { CARD_STATUS } from "constants/CardStatusData";
+import { CARD_STATUS } from "CONSTANT_DATA/CARD_STATUS";
 
 const CardList = () => {
   const [cardDatas, setCardDatas] = useRecoilState(cardsState);
@@ -18,7 +18,7 @@ const CardList = () => {
     return status === cardType;
   });
 
-  const getData = async (e) => {
+  const getData = (e) => {
     setCardType(e.target.className);
   };
 
