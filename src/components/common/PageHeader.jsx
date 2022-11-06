@@ -1,12 +1,16 @@
 import { useState } from "react";
 import styled from "styled-components";
-import DateRangeModal from "components/AdManagement/DateRangeModal";
-import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
 import { useRecoilValue } from "recoil";
+
+import { startDateAtom, endDateAtom } from "store/date";
+
+import { handleFormatDate } from "utils/handleFormatDate";
+
+import DateRangeModal from "components/AdManagement/DateRangeModal";
+
+import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { startDateAtom, endDateAtom } from "store/atoms/date";
-import { handleFormatDate } from "utils/handleFormatDate";
 
 const PageHeader = ({ title }) => {
   const [isShowDateRangePicker, setIsShowDateRangePicker] = useState(false);
@@ -21,15 +25,19 @@ const PageHeader = ({ title }) => {
 
   return (
     <PageHeaderWrapper>
-      <PageTitle>title{title}</PageTitle>
-      <DateRangeContainer onClick={handleToggleDateRangePicker}>
-        <FlexBox>
-          {DateRange}
-          <KeyboardArrowDownSharpIcon fontSize="large" />
-        </FlexBox>
-      </DateRangeContainer>
-      {isShowDateRangePicker && (
-        <DateRangeModal handleToggleDateRangePicker={handleToggleDateRangePicker} />
+      <PageTitle>{title}</PageTitle>
+      {title === "대시보드" && (
+        <>
+          <DateRangeContainer onClick={handleToggleDateRangePicker}>
+            <FlexBox>
+              {DateRange}
+              <KeyboardArrowDownSharpIcon fontSize="large" />
+            </FlexBox>
+          </DateRangeContainer>
+          {isShowDateRangePicker && (
+            <DateRangeModal handleToggleDateRangePicker={handleToggleDateRangePicker} />
+          )}
+        </>
       )}
     </PageHeaderWrapper>
   );
@@ -40,8 +48,8 @@ export default PageHeader;
 const PageHeaderWrapper = styled.div`
   ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
-  height: 80px;
-  margin: 0 40px;
+  min-height: 80px;
+  margin: 0 40px 0 10px;
   border-bottom: 1px solid #edeff1;
   font-weight: 900;
   font-size: 26px;

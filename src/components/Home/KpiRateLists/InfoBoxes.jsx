@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
 import React from "react";
+import styled from "@emotion/styled";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import numberUnitToKorean from "utils/numberUnitToKorean";
 
@@ -97,6 +97,7 @@ export const Revenue = ({ value, exValue }) => {
 };
 
 const InfoBoxWrapper = styled.div`
+  min-width: 220px;
   border: 0.5px solid #edeff1;
   border-radius: 10px;
   margin: 10px;

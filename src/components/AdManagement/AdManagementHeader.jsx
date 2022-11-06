@@ -1,11 +1,14 @@
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
+
+import { adListFilterState } from "store/adList";
+
+import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
+
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import { AD_MANAGEMENT_DATA, CREATE_AD } from "constants/AdManagementSelectData";
-import { adListFilterState } from "store/atoms/cards";
-import { useRecoilState } from "recoil";
 
 const AdManagementHeader = () => {
   const [adListFilter, setAdListFilter] = useRecoilState(adListFilterState);
@@ -66,4 +69,5 @@ const HeaderWrapper = styled.div`
   ${({ theme }) => theme.flexDefault}
   justify-content: space-between;
   height: 80px;
+  padding: 0 40px 0 0;
 `;

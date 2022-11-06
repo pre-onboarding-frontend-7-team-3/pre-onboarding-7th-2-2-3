@@ -1,15 +1,12 @@
-import styled from "styled-components";
-import { centerize } from "shared/GlobalStyle";
-import DropDown from "components/dropDown";
 import { useRecoilState, useRecoilValue } from "recoil";
-import {
-  graphDateRangeState,
-  graphXAxisState,
-  menuItemsWithOutFirstState,
-} from "store/atoms/graphNav";
+import styled from "styled-components";
+
+import { graphDateRangeState, graphXAxisState, menuItemsWithOutFirstState } from "store/graphNav";
 import { GRAPH_RANGE_DAY_MENU_ITEM, GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
 import GraphChart from "./GraphChart";
 
+import DropDown from "components/dropDown";
+import { centerize } from "shared/GlobalStyle";
 function KpiGraph() {
   const [graphXAxis, setGraphXAxis] = useRecoilState(graphXAxisState);
   const menuItemsWithOutFirst = useRecoilValue(menuItemsWithOutFirstState);

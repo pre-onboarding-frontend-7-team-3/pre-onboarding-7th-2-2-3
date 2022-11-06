@@ -1,37 +1,11 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 
+import { SERVICE_TYPE } from "constants/ServiceType";
+
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-
-import { SERVICE_TYPE } from "constants/ServiceType";
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  width: 230px;
-
-  margin: 0 10px 50px 0;
-`;
-
-const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  padding-left: 5px;
-  margin: 0 0 10px 10px;
-
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 14px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #94a2ad;
-`;
 
 const NavService = () => {
   const [option, setOption] = useState("매드업");
@@ -60,3 +34,29 @@ const NavService = () => {
 };
 
 export default NavService;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 230px;
+
+  margin: 0 10px 50px 0;
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-left: 5px;
+  margin: 0 0 10px 10px;
+
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #94a2ad;
+`;

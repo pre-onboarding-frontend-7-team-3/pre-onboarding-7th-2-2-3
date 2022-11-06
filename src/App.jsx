@@ -1,8 +1,8 @@
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import CardList from "components/card/CardList";
-import Home from "pages/Home";
-
+import Home from "pages/Home/Home";
+import AdManagement from "pages/AdManagement/AdManagement";
 import Layout from "components/Layout";
 
 const Router = () => {
@@ -21,7 +21,9 @@ const Router = () => {
           path="/ads"
           element={
             <Layout>
-              <CardList />
+              <Suspense fallback={<></>}>
+                <AdManagement />
+              </Suspense>
             </Layout>
           }
         />

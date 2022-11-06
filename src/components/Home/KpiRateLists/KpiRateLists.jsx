@@ -4,8 +4,11 @@ import styled from "@emotion/styled";
 import { useRecoilValue, useRecoilValueLoadable } from "recoil";
 import { getKPI } from "utils/getKPI";
 import { Click, Conv, Cost, Imp, Revenue, ROAS } from "./InfoBoxes";
-import { endDateAtom, startDateAtom } from "store/atoms/date";
-import { trendDataQuery } from "store/atoms/data";
+import { endDateAtom, startDateAtom } from "store/date";
+import { trendDataQuery } from "store/trend";
+
+import { LoadingWrapper } from "components/Layout";
+import Spinner from "components/common/Spinner";
 
 //
 export default function KpiRateLists() {
@@ -27,7 +30,11 @@ export default function KpiRateLists() {
 
   return (
     <>
-      {state === "loading" && <div>loading</div>}
+      {state === "loading" && (
+        <LoadingWrapper>
+          <Spinner />
+        </LoadingWrapper>
+      )}
       {state === "hasValue" && kpiValues && (
         <Container>
           <ROAS value={kpiValues[0]?.roas} exValue={kpiValues[1]?.roas} />
@@ -48,4 +55,5 @@ const Container = styled.section`
   grid-template-rows: repeat(2, 1fr);
   row-gap: 10px;
   column-gap: 20px;
+  padding: 20px 30px 0 0;
 `;

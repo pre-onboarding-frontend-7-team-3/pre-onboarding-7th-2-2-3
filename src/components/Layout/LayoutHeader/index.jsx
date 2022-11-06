@@ -3,13 +3,33 @@ import styled from "@emotion/styled";
 
 import Icon from "components/common/Icon";
 
+const LayoutHeader = () => {
+  return (
+    <Wrapper>
+      <IconWrapper>
+        <Icon icon="Alarm" />
+      </IconWrapper>
+      <IconWrapper>
+        <Icon icon="Setting" />
+      </IconWrapper>
+
+      <UserInfoWrapper>
+        <Icon icon="DefaultUser" size={40} />
+        원티드님
+      </UserInfoWrapper>
+    </Wrapper>
+  );
+};
+
+export default LayoutHeader;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   width: 100%;
-  height: 80px;
+  min-height: 80px;
 
   gap: 24px;
 `;
@@ -37,23 +57,3 @@ const UserInfoWrapper = styled.div`
 
   cursor: pointer;
 `;
-
-const LayoutHeader = () => {
-  return (
-    <Wrapper>
-      <IconWrapper>
-        <Icon icon="Alarm" />
-      </IconWrapper>
-      <IconWrapper>
-        <Icon icon="Setting" />
-      </IconWrapper>
-
-      <UserInfoWrapper>
-        <Icon icon="DefaultUser" size={40} />
-        원티드님
-      </UserInfoWrapper>
-    </Wrapper>
-  );
-};
-
-export default LayoutHeader;

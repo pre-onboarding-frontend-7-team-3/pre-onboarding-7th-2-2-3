@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+
 import { CARD_STATUS } from "constants/AdManagementSelectData";
 
 export const cardTypeState = atom({
