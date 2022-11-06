@@ -13,11 +13,17 @@ const daysBetween = (d1, d2) => {
   return a;
 };
 
-export const getKPI = (trendData, startDate, endDate) => {
-  const startPoint = trendData.findIndex((data) => daysBetween(new Date(data.date), startDate) < 1);
+export const getDataBetweenDate = (data, startDate, endDate) => {
+  const startPoint = data.findIndex((data) => daysBetween(new Date(data.date), startDate) < 1);
 
   const diffOfdate = daysBetween(startDate, endDate);
 
+  const KPIdataForComparison = data.slice(startPoint, startPoint + diffOfdate + 1);
+
+  return { KPIdataForComparison, diffOfdate };
+};
+
+export const getKPI = (trendData, startDate, endDate) => {
   const KPIs = {
     roas: 0, //ROAS
     cost: 0, //광고비
@@ -35,8 +41,9 @@ export const getKPI = (trendData, startDate, endDate) => {
     conv: 0, //전환 수
     revenue: 0,
   };
+  const { KPIdataForComparison, diffOfdate } = getDataBetweenDate(trendData, startDate, endDate);
+  const startPoint = trendData.findIndex((data) => daysBetween(new Date(data.date), startDate) < 1);
 
-  const KPIdataForComparison = trendData.slice(startPoint, startPoint + diffOfdate + 1);
   const exKPIdataForComparison = trendData.slice(startPoint - diffOfdate - 1, startPoint);
   for (let i = 0; i <= diffOfdate; i++) {
     for (let key of Object.keys(KPIs)) {
