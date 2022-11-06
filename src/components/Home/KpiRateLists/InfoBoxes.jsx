@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
-
-import unitDecider from "utils/unitDecider";
+import numberUnitToKorean from "utils/numberUnitToKorean";
 
 export const ROAS = ({ value, exValue }) => {
   const diff = value - exValue;
@@ -25,11 +24,11 @@ export const Cost = ({ value, exValue }) => {
     <InfoBoxWrapper>
       <TitleBox>
         <h3>광고비</h3>
-        <p>{unitDecider(parseInt(value))}원</p>
+        <p>{numberUnitToKorean(parseInt(value))} 원</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(parseInt(diff)))}원
+        {numberUnitToKorean(Math.abs(parseInt(diff)))} 원
       </RightBox>
     </InfoBoxWrapper>
   );
@@ -41,11 +40,11 @@ export const Imp = ({ value, exValue }) => {
     <InfoBoxWrapper>
       <TitleBox>
         <h3>노출수</h3>
-        <p>{unitDecider(parseInt(value))} 회</p>
+        <p>{numberUnitToKorean(parseInt(value))} 회</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(parseInt(diff)))} 회
+        {numberUnitToKorean(Math.abs(parseInt(diff)))} 회
       </RightBox>
     </InfoBoxWrapper>
   );
@@ -57,11 +56,11 @@ export const Click = ({ value, exValue }) => {
     <InfoBoxWrapper>
       <TitleBox>
         <h3>클릭수</h3>
-        <p>{unitDecider(value)} 회</p>
+        <p>{numberUnitToKorean(value)} 회</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(diff))} 회
+        {numberUnitToKorean(Math.abs(diff))} 회
       </RightBox>
     </InfoBoxWrapper>
   );
@@ -87,11 +86,11 @@ export const Revenue = ({ value, exValue }) => {
     <InfoBoxWrapper>
       <TitleBox>
         <h3>매출</h3>
-        <p>{unitDecider(parseInt(value))} 원</p>
+        <p>{numberUnitToKorean(parseInt(value))} 원</p>
       </TitleBox>
       <RightBox>
         {diff > 0 ? <AiOutlineCaretUp color="green" /> : <AiOutlineCaretDown color="red" />}
-        {unitDecider(Math.abs(diff))} 원
+        {numberUnitToKorean(Math.abs(diff))} 원
       </RightBox>
     </InfoBoxWrapper>
   );

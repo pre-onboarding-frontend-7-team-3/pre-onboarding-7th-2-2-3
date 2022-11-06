@@ -1,24 +1,19 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
 
-import {
-  graphDateRangeState,
-  graphXAxisState,
-  menuItemsWithOutFirstState,
-} from "store/graphNav";
+import { graphDateRangeState, graphXAxisState, menuItemsWithOutFirstState } from "store/graphNav";
 import { GRAPH_RANGE_DAY_MENU_ITEM, GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
+import GraphChart from "./GraphChart";
 
 import DropDown from "components/dropDown";
-
 import { centerize } from "shared/GlobalStyle";
-
-function CompareGraph() {
+function KpiGraph() {
   const [graphXAxis, setGraphXAxis] = useRecoilState(graphXAxisState);
   const menuItemsWithOutFirst = useRecoilValue(menuItemsWithOutFirstState);
   const [graphDateRange, setGraphDateRange] = useRecoilState(graphDateRangeState);
 
   return (
-    <>
+    <GraphWrapper>
       <NavWrapper>
         <XAxisIndexWrapper>
           <DropDown
@@ -41,11 +36,16 @@ function CompareGraph() {
           menuItems={GRAPH_RANGE_DAY_MENU_ITEM}
         />
       </NavWrapper>
-    </>
+      <GraphChart />
+    </GraphWrapper>
   );
 }
 
-const NavWrapper = styled.section`
+const GraphWrapper = styled.section`
+  height: 70%;
+`;
+
+const NavWrapper = styled.nav`
   ${centerize}
   justify-content: space-between;
 `;
@@ -54,4 +54,4 @@ const XAxisIndexWrapper = styled.div`
   ${centerize}
 `;
 
-export default CompareGraph;
+export default KpiGraph;

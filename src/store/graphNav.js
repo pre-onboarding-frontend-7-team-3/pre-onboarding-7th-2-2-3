@@ -4,7 +4,7 @@ import { GRAPH_X_AXIS_MENU_ITEMS } from "constants/GraphNavMenuItem";
 
 export const graphXAxisState = atom({
   key: "graphXAsisState",
-  default: { firstOption: "roas", secondOption: "cost" },
+  default: { firstOption: "roas", secondOption: null },
 });
 
 export const menuItemsWithOutFirstState = selector({
@@ -21,5 +21,5 @@ export const menuItemsWithOutFirstState = selector({
 
 export const graphDateRangeState = atom({
   key: "graphDateRangeState",
-  default: "week",
+  default: "day",
 });

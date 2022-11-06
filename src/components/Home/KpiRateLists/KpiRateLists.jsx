@@ -10,7 +10,8 @@ import { trendDataQuery } from "store/trend";
 import { LoadingWrapper } from "components/Layout";
 import Spinner from "components/common/Spinner";
 
-export default function ComparePerformance() {
+//
+export default function KpiRateLists() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);
 
