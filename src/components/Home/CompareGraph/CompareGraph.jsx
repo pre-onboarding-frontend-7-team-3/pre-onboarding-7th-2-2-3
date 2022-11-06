@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { centerize } from "shared/global.style";
+import { centerize } from "shared/GlobalStyle";
 import DropDown from "components/dropDown";
 import { useRecoilState, useRecoilValue } from "recoil";
 import {
