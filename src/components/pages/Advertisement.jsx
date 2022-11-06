@@ -1,8 +1,8 @@
 import AdCard from "components/AdCard";
-import { getAdvertisState } from "components/atoms/advertis";
+import { getAdStatus, getAdvertisState } from "components/atoms/advertis";
 import Header from "components/common/Header";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
 
@@ -15,7 +15,7 @@ const Advertisement = () => {
     ENDED: "ended",
     ACTIVE: "active",
   };
-  const [getCardType, setGetCardType] = useState(cardType.ALL);
+  const [getCardType, setGetCardType] = useRecoilState(getAdStatus);
 
   useEffect(() => {
     const getData = async () => {

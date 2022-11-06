@@ -12,3 +12,8 @@ export const getAdvertisState = atom({
   key: "getAdvertismentState",
   default: adservices.get.bind(adservices),
 });
+
+export const getAdStatus = atom({
+  key: "AdStatus",
+  default: "all",
+});
