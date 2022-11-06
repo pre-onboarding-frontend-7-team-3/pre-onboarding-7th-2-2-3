@@ -10,7 +10,6 @@ const daysBetween = (d1, d2) => {
     Math.abs(treatAsUTC(d1).setHours(0, 0, 0, 0) - treatAsUTC(d2).setHours(0, 0, 0, 0)) /
       millisecondsPerDay,
   );
-  console.log(a, d1, d2);
   return a;
 };
 
