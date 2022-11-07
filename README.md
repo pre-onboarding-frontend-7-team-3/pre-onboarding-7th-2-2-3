@@ -192,13 +192,13 @@ https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blo
 
 ## 🔨 사용 기술
 
-<img alt="HTML5" src ="[https://img.shields.io/badge/HTML5-E34F26?&style=flat&logo=HTML5&logoColor=white](https://img.shields.io/badge/HTML5-E34F26?&style=flat&logo=HTML5&logoColor=white)"/> <img alt="CSS3" src ="[https://img.shields.io/badge/CSS3-1572B6?&style=flat&logo=CSS3&logoColor=white](https://img.shields.io/badge/CSS3-1572B6?&style=flat&logo=CSS3&logoColor=white)"/> <img alt="JavaScript" src ="[https://img.shields.io/badge/JavaScript-F7DF1E?&style=flat&logo=JavaScript&logoColor=white](https://img.shields.io/badge/JavaScript-F7DF1E?&style=flat&logo=JavaScript&logoColor=white)"/> <img alt="React" src ="[https://img.shields.io/badge/React-61DAFB?&style=flat&logo=React&logoColor=white](https://img.shields.io/badge/React-61DAFB?&style=flat&logo=React&logoColor=white)"/> 
 
-<img alt="Axios" src ="[https://img.shields.io/badge/Axios-5A29E4?&style=flat&logo=Axios&logoColor=white](https://img.shields.io/badge/Axios-5A29E4?&style=flat&logo=Axios&logoColor=white)"/> <img alt="styled-components" src ="[https://img.shields.io/badge/styled](https://img.shields.io/badge/styled) components-DB7093?&style=flat&logo=styled-components&logoColor=white"/> 
+<img alt="HTML5" src ="https://img.shields.io/badge/HTML5-E34F26?&style=flat&logo=HTML5&logoColor=white"/> <img alt="CSS3" src ="https://img.shields.io/badge/CSS3-1572B6?&style=flat&logo=CSS3&logoColor=white"/> <img alt="JavaScript" src ="https://img.shields.io/badge/JavaScript-F7DF1E?&style=flat&logo=JavaScript&logoColor=white"/> <img alt="React" src ="https://img.shields.io/badge/React-61DAFB?&style=flat&logo=React&logoColor=white"/> <img alt="ReactRouter" src ="https://img.shields.io/badge/React Router-CA4245?&style=flat&logo=ReactRouter&logoColor=white"/> <img alt="Recoil" src ="https://img.shields.io/badge/Recoil-0078D4?&style=flat&logoColor=white"/>
 
-<img alt="react-responsive" src ="[https://img.shields.io/badge/react](https://img.shields.io/badge/react) responsive-000000?&style=flat&logoColor=white"/>
+<img alt="Axios" src ="https://img.shields.io/badge/Axios-5A29E4?&style=flat&logo=Axios&logoColor=white"/> <img alt="styled-components" src ="https://img.shields.io/badge/styled components-DB7093?&style=flat&logo=styled-components&logoColor=white"/> <img alt="MUI" src ="https://img.shields.io/badge/MUI-007FFF?&style=flat&logo=MUI&logoColor=white"/> <img alt="Lodash" src ="https://img.shields.io/badge/Lodash-3492FF?&style=flat&logo=Lodash&logoColor=white"/>
 
-<img alt="Git" src ="[https://img.shields.io/badge/Git-F05032?&style=flat&logo=Git&logoColor=white](https://img.shields.io/badge/Git-F05032?&style=flat&logo=Git&logoColor=white)"/> <img alt="GitHub" src ="[https://img.shields.io/badge/GitHub-181717?&style=flat&logo=GitHub&logoColor=white](https://img.shields.io/badge/GitHub-181717?&style=flat&logo=GitHub&logoColor=white)"/> <img alt="Notion" src ="[https://img.shields.io/badge/Notion-000000?&style=flat&logo=Notion&logoColor=white](https://img.shields.io/badge/Notion-000000?&style=flat&logo=Notion&logoColor=white)"/>
+<img alt="Git" src ="https://img.shields.io/badge/Git-F05032?&style=flat&logo=Git&logoColor=white"/> <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717?&style=flat&logo=GitHub&logoColor=white"/> <img alt="Notion" src ="https://img.shields.io/badge/Notion-000000?&style=flat&logo=Notion&logoColor=white"/>
+
 
 </br>
 
@@ -206,8 +206,41 @@ https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blo
 
 ```
 📂 src
-├──
-
+├── 📂 apis // json-server와 통신하는 api
+├── 📂 components // 컴포넌트 관리
+│   ├── 📂 AdManagement
+│   ├── 📂 Card
+│   ├── 📂 common
+│   ├── 📂 DropDown
+│   ├── 📂 Home
+│   └── 📂 Layout
+├── 📂 constants // 상수 관리
+├── 📂 hooks
+│   ├── 📂 AdManagement
+│   │   ├── 📄 useEndDate
+│   │   └── 📄 useStartDate
+│   └── 📄 useOnClickOutside
+├── 📂 pages // 페이지 관리
+│   └── 📂 Home
+│       ├── 📄 Home
+│       └── 📄 index
+├── 📂 store // recoil store 관리
+│   ├── 📄 addFilter
+│   ├── 📄 cards
+│   ├── 📄 data
+│   ├── 📄 date
+│   └── 📄 graphNav
+├── 📂 styles // 전역 style 관리
+│   ├── 📄 GlobalStyles
+│   └── 📄 theme
+├── 📂 utils // 공통적으로 사용되는 util 함수 관리
+│   ├── 📄 dateConvert
+│   ├── 📄 getKPI
+│   ├── 📄 handleFormatDate
+│   ├── 📄 unitDecider
+│   └── 📄 validateCost
+├── App.jsx
+└── index.jsx
 ```
 
 </br>
