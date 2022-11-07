@@ -115,9 +115,9 @@ const Card = ({ cardData }) => {
               height: "40px",
               color: "#3A474E",
               fontWeight: "700",
-              fontSize: "14px",
-              margin: "20px 0 20px 20px",
-              border: "1 solid black",
+              fontSize: "13px",
+              margin: "20px 0 20px 5px",
+              border: "1px solid #94A2AD",
             }}
           >
             {statusModify}
