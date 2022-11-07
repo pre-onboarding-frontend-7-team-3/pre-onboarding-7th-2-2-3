@@ -8,26 +8,27 @@
 > ### [배포링크](https://preonboarding-2-2-3.netlify.app/)
 > 
 
-### ✨주요기능
+## ✨주요기능
 
 ### 1. 반응형 Layout
+<img src="https://user-images.githubusercontent.com/45018724/200210227-9bbe1119-7b90-4b6b-a6d9-df7d30b02c68.gif" width="70%" height="70%"/>
 
-![반응형Layout](https://user-images.githubusercontent.com/45018724/200210227-9bbe1119-7b90-4b6b-a6d9-df7d30b02c68.gif)
-
-반응형으로 사이드 바를 구현했습니다. useOnClickOutside 훅 사용하여, 목록 버튼으로 사이드 바 연 상태일 경우, 사이드 바 바깥 클릭하면 닫히도록 UX에 신경썼습니다. 
+- 반응형으로 사이드 바를 구현했습니다. useOnClickOutside 훅 사용하여, 목록 버튼으로 사이드 바 연 상태일 경우, 사이드 바 바깥 클릭하면 닫히도록 UX에 신경썼습니다. 
 
 ### 2. datePicker
-![datePicker](https://user-images.githubusercontent.com/45018724/200210254-edb354de-bb03-481d-8354-af9a3b85d4a2.gif)
+<img src="https://user-images.githubusercontent.com/45018724/200210254-edb354de-bb03-481d-8354-af9a3b85d4a2.gif" width="70%" height="70%"/>
 
- KPI 변화를 확인하고자 하는 기간을 설정합니다. 데이터가 존재하는 기간 동안만 영역 선택이 가능하게 해두었습니다.   
+- KPI 변화를 확인하고자 하는 기간을 설정합니다. 데이터가 존재하는 기간 동안만 영역 선택이 가능하게 해두었습니다.   
 
 ### 3. KPIGraph
-![graph](https://user-images.githubusercontent.com/45018724/200210258-372cad1f-a1e1-48e6-af9f-a9038e9fcdad.gif)
+<img src="https://user-images.githubusercontent.com/45018724/200210258-372cad1f-a1e1-48e6-af9f-a9038e9fcdad.gif" width="70%" height="70%"/>
 
 - 일간/주간 filter에 따라, 일간에는 선택 기간 시작일의 데이터를 보여주고, 주간 에는 선택 기간의 변화 추세를 보여줍니다. 설정한 filter는 recoil로 관리하여, 페이지 이동 시에도 상태가 유지되게 하였습니다.
 - 좌측 dropbox에서의 선택에 따라, 2가지 지표를 동시에 확인할 수 있습니다. 
+
 ### 4. 광고 관리
-![광고_관리](https://user-images.githubusercontent.com/45018724/200216517-a42e08ff-0169-4a07-ae65-c9a624336965.gif)
+<img src="https://user-images.githubusercontent.com/45018724/200216517-a42e08ff-0169-4a07-ae65-c9a624336965.gif" width="70%" height="70%"/>
+
 - 광고 데이터를 확인 및 수정할 수 있습니다. 마찬가지로 Filter는 recoil로 관리되어, 상태가 유지됩니다. 
 
 
