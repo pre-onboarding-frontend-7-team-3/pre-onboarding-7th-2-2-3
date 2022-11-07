@@ -10,9 +10,9 @@ export class AdvertisementService {
   }
 
   async get(url = "") {
-    const { data } = await this.client.request({ method: "get", url });
+    const res = await this.client.request({ method: "get", url });
 
-    return data;
+    return res;
   }
 
   async edit({ id, ...rest }) {
