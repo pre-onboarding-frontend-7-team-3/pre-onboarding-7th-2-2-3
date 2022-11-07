@@ -1,4 +1,4 @@
-const unitDecider = (value) => {
+const numberUnitToKorean = (value) => {
   const length = value.toString().length;
   if (length <= 3) {
     return value;
@@ -13,4 +13,4 @@ const unitDecider = (value) => {
   }
 };
 
-export default unitDecider;
+export default numberUnitToKorean;
