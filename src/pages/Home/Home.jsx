@@ -8,7 +8,6 @@ import { PAGE_HEADER_TITLE } from "constants/PageheaderData";
 const Home = () => {
   return (
     <>
-      <SEO title={PAGE_HEADER_TITLE.DASHBOARD} />
       <PageHeader title={PAGE_HEADER_TITLE.DASHBOARD} />
       <KpiRateLists />
       <KpiGraph />

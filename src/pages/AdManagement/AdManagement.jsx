@@ -5,9 +5,10 @@ import CardList from "components/card/CardList";
 import SEO from "components/common/SEO";
 
 const AdManagement = () => {
+  // eslint-disable-next-line no-console
+  console.log("admangement page rendering!");
   return (
     <>
-      <SEO title={PAGE_HEADER_TITLE.AD_MANAGEMENT} />
       <PageHeader title={PAGE_HEADER_TITLE.AD_MANAGEMENT} />
       <CardList />
     </>
