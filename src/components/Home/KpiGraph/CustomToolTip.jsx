@@ -4,7 +4,6 @@ import { dateConverterToKorean } from "utils/handleFormatDate";
 
 function CustomTooltip({ active, payload, label }) {
   if (active && payload && payload.length) {
-    // kpi
     return (
       <>
         <ToolTipWrapper className="custom-tooltip">

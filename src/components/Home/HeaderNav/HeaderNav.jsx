@@ -17,7 +17,6 @@ const HeaderNav = () => {
     <div>
       <h1>대시보드</h1>
       <DateRangePicker
-        // editableDateInputs={true}
         onChange={(item) => setState([item.selection])}
         moveRangeOnFirstSelection={false}
         ranges={state}

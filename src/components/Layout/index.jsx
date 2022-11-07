@@ -13,11 +13,8 @@ import Spinner from "components/common/Spinner";
 import Icon from "components/common/Icon";
 
 const Layout = ({ children }) => {
-  // const [isLoading, setIsLoading] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const path = useLocation();
-  const {isLoading} = useLoading();
+  const { isLoading } = useLoading();
   const navRef = useRef(null);
   useOnClickOutside(navRef, () => {
     setIsToggled(false);
