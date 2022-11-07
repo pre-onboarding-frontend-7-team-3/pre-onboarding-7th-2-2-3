@@ -21,9 +21,7 @@ const Router = () => {
           path="/ads"
           element={
             <Layout>
-              <Suspense fallback={<></>}>
-                <AdManagement />
-              </Suspense>
+              <AdManagement />
             </Layout>
           }
         />
