@@ -13,7 +13,9 @@ const Router = () => {
           path="/"
           element={
             <Layout>
-              <Home />
+              <Suspense fallback={<>...loading</>}>
+                <Home />
+              </Suspense>
             </Layout>
           }
         />
