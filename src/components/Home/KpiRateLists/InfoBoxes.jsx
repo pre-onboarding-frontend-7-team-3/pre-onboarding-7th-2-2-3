@@ -81,7 +81,7 @@ export const Conv = ({ value, exValue }) => {
   );
 };
 export const Revenue = ({ value, exValue }) => {
-  const diff = value - exValue;
+  const diff = parseInt(value - exValue);
   return (
     <InfoBoxWrapper>
       <TitleBox>
