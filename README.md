@@ -55,7 +55,7 @@ $ npm run start
 ## 📃 협업 과정
 
 1. 우선 노션에서 프로젝트를 페이지 별로 나누고 또 다시 페이지 별로 필요한 컴포넌트를 나열하여 작업을 최대한 세분화 하려고 했습니다.
-    - [https://www.notion.so/2-1-498c225b2d814eb8b77bf1d6d312037d](https://www.notion.so/2-1-498c225b2d814eb8b77bf1d6d312037d)
+    - [2-2 과제 ](https://dramatic-chinchilla-c3f.notion.site/2-2-ca337b9997d24b96bae49752a8bd9ac5)
 2. 본 프로젝트는 동료학습에 최적화된 과정을 찾아가며 진행했습니다. [VSC Live Code extension](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)을 활용해서 라이브 코드 리뷰를 진행하고 각자 구현한 코드에 대한 피드백 및 리팩토링 후 `페어 프로그래밍` 방식으로 Best Practice를 채택했습니다.
 3. 게더타운에 모여 화면공유를 하며 실시간으로 피드백을 주고 받았습니다.
 
