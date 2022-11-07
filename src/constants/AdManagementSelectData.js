@@ -1,8 +1,4 @@
-const AD_MANAGEMENT_DATA = [
-  { name: "전체 광고" },
-  { name: "진행중인 광고" },
-  { name: "종료된 광고" },
-];
+const AD_MANAGEMENT_DATA = [{ text: "전체" }, { text: "진행중" }, { text: "중단됨" }];
 
 const CARD_STATUS = {
   ALL: "all",

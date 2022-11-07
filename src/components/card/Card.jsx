@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+
+import { dateConvert } from "utils/dateConvert";
+import { vaildateCost } from "utils/vaildateCost";
+
 import Paper from "@mui/material/Paper";
 import { Box, Grid, InputBase, Table, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { dateCovert } from "utils/dateCovert";
-import { vaildateCost } from "utils/vaildateCost";
 
 const Card = ({ cardData }) => {
   const [toogle, setToogle] = useState(false);
@@ -31,14 +33,14 @@ const Card = ({ cardData }) => {
     if (description === "active") {
       description = "진행중";
     } else if (description === "ended") {
-      description = "중단됨" + " (" + dateCovert(cardData.endDate) + ")";
+      description = "중단됨" + " (" + dateConvert(cardData.endDate) + ")";
     }
     return { name, description };
   }
 
   const rows = [
     createData("상태", cardData.status),
-    createData("광고 생성일", dateCovert(cardData.startDate)),
+    createData("광고 생성일", dateConvert(cardData.startDate)),
     createData("일 희망 예산", vaildateCost(cardData.budget)),
     createData("광고 수익률", cardData.report.roas + "%"),
     createData("매출", vaildateCost(cardData.report.convValue)),

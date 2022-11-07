@@ -1,13 +1,22 @@
-import ReactDOM from "react-dom/client";
 import React from "react";
-import App from "./App";
+import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import App from "./App";
+
+import { GlobalStyle } from "shared/GlobalStyle";
+import theme from "shared/theme";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// const theme = useTheme();
 
 root.render(
-  <Router>
-    <App />
-  </Router>,
+  <>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <Router>
+        <App />
+      </Router>
+    </ThemeProvider>
+  </>,
 );

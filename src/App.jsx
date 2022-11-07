@@ -1,17 +1,32 @@
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
-import CardList from "components/card/CardList";
-import Home from "pages/Home";
+import Home from "pages/Home/Home";
+import AdManagement from "pages/AdManagement/AdManagement";
+import Layout from "components/Layout";
 
-// import { ThemeProvider } from "styled-components";
-// import { GlobalStyle, Theme } from "shared/global.style";
 const Router = () => {
   return (
     <RecoilRoot>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ads" element={<CardList />} />
-        <Route />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/ads"
+          element={
+            <Layout>
+              <Suspense fallback={<></>}>
+                <AdManagement />
+              </Suspense>
+            </Layout>
+          }
+        />
       </Routes>
     </RecoilRoot>
   );

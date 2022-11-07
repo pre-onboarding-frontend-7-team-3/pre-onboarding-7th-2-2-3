@@ -1,14 +1,17 @@
-import PageHeader from "components/common/PageHeader";
-import CompareGraph from "components/Home/CompareGraph/CompareGraph";
-import ComparePerformance from "components/Home/ComparePerformance/ComparePerformance";
 import React from "react";
+import PageHeader from "components/common/PageHeader";
+import KpiGraph from "components/Home/KpiGraph/KpiGraph";
+import KpiRateLists from "components/Home/KpiRateLists";
+import SEO from "components/common/SEO";
+import { PAGE_HEADER_TITLE } from "constants/PageheaderData";
 
 const Home = () => {
   return (
     <>
-    <PageHeader />
-        <ComparePerformance />
-      <CompareGraph />
+      <SEO title={PAGE_HEADER_TITLE.DASHBOARD} />
+      <PageHeader title={PAGE_HEADER_TITLE.DASHBOARD} />
+      <KpiRateLists />
+      <KpiGraph />
     </>
   );
 };
