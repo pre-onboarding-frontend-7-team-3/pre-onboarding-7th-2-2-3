@@ -161,6 +161,8 @@ useOnClickOutside hook을 만들어 사용하였습니다.
 
 https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blob/fa0e210fb139dee139fdf2c8212ce872ebc914a7/src/components/Layout/index.jsx#L21-L37
 
+<br/>
+
 ## 🔒 팀 코드 컨벤션
 
 - [ ]  git commit message 컨벤션
@@ -212,26 +214,26 @@ https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blo
 ├── 📂 components // 컴포넌트 관리
 │   ├── 📂 AdManagement
 │   ├── 📂 Card
-│   ├── 📂 common
+│   ├── 📂 common // svg icons, SEO
 │   ├── 📂 DropDown
 │   ├── 📂 Home
-│   └── 📂 Layout
+│   └── 📂 Layout // sideNav와 Header 포함
 ├── 📂 constants // 상수 관리
 ├── 📂 hooks
 │   ├── 📂 AdManagement
-│   │   ├── 📄 useEndDate
-│   │   └── 📄 useStartDate
-│   └── 📄 useOnClickOutside
+│   │   ├── 📄 useEndDate // recoil을 통해 시작,끝 날짜를 state로 관리
+│   │   └── 📄 useStartDate 
+│   └── 📄 useOnClickOutside // 반응형 nav 클릭 탐지
 ├── 📂 pages // 페이지 관리
 │   └── 📂 Home
 │       ├── 📄 Home
 │       └── 📄 index
 ├── 📂 store // recoil store 관리
 │   ├── 📄 addFilter
-│   ├── 📄 cards
-│   ├── 📄 data
+│   ├── 📄 cards // ad_list_data.json 관련
+│   ├── 📄 data // trend_data.json 관련
 │   ├── 📄 date
-│   └── 📄 graphNav
+│   └── 📄 graphNav // 대시보드 graph data 관련
 ├── 📂 styles // 전역 style 관리
 │   ├── 📄 GlobalStyles
 │   └── 📄 theme
