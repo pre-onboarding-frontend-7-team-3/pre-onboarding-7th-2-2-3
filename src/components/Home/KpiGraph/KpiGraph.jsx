@@ -46,7 +46,8 @@ const GraphWrapper = styled.section`
 `;
 
 const NavWrapper = styled.nav`
-  ${centerize}
+  ${centerize};
+  width: 97%;
   justify-content: space-between;
 `;
 

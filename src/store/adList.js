@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { atom, selector } from "recoil";
 import axios from "axios";
 
@@ -9,8 +10,12 @@ export const adListFilterState = atom({
 export const adListState = selector({
   key: "adListState",
   get: async ({ get }) => {
-    const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/ad_list_data`);
-    return data.ads;
+    try {
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/ad_list_data`);
+      return data.ads;
+    } catch (error) {
+      console.log("error", error);
+    }
   },
 });
 

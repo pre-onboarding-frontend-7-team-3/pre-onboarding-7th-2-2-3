@@ -4,7 +4,7 @@
 >
 > 프로젝트 기간 :
 >
-> #### [배포링크]()
+> #### [배포링크](https://preonboarding-2-2-3.netlify.app/)
 
 </br>
 
