@@ -134,7 +134,16 @@ return (
 	</>);
 ```
 
-### 
+### 3. api함수를 oop 캡슐화
+
+황연욱 멘토님이 알려주신 [oop](https://github.com/walking-sunset/SoC-dependency-7th)를 이용해서 이번에 api 함수에 적용해보았습니다.
+
+그 결과 관심분리가 잘 적용되어 재사용성이 올라갔습니다.
+
+
+https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blob/fa0e210fb139dee139fdf2c8212ce872ebc914a7/src/apis/index.js#L1-L7
+
+apis 폴더에 잘 정리해 두었으니 참고바랍니다. [/src/apis](https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/tree/main/src/apis)
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 여기하고 있었습니다 !
 
