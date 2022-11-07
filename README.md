@@ -155,10 +155,10 @@ apis 폴더에 잘 정리해 두었으니 참고바랍니다. [/src/apis](https:
 
 ### 4. lodash를 통한 반응형 nav
 
-일정 사이즈 이내의 화면에서는 sideNavigation이 toggle을 통해 보이지 않을 수 있도록 처리하였습니다.
-useOnClickOutside hook을 만들어 사용하였습니다.
-
-모바일 환경에서의 구동을 고려할 수 있습니다.
+1. 정해진 범위 안쪽으로 화면이 축소되는 상황에서 사이드바가 숨겨지도록 처리 했습니다.
+2. 화면이 축소되어 사이드바가 숨겨지면 햄버거 버튼을 통해 숨겨진 사이드바를 열 수 있습니다.
+3. useOnClickOutside hook을 통해, sideNav 영역밖을 클릭하면 sideNav가 닫히도록 처리했습니다.
+4.  화면 사이즈 변화를 디바운스로 처리해 작은 화면에 적응된 사이드바 설정이 변화한 화면크기에 반응할 수 있도록 처리 했습니다.
 
 https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blob/fa0e210fb139dee139fdf2c8212ce872ebc914a7/src/components/Layout/index.jsx#L21-L37
 
