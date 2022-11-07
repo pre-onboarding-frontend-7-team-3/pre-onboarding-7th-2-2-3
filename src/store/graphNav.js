@@ -21,5 +21,5 @@ export const menuItemsWithOutFirstState = selector({
 
 export const graphDateRangeState = atom({
   key: "graphDateRangeState",
-  default: "day",
+  default: "week",
 });
