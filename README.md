@@ -12,19 +12,17 @@
 
 ### 1. 반응형 Layout
 
-![반응형Layout.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be592b8e-b720-42e1-97ab-fabff12d6349/%EB%B0%98%EC%9D%91%ED%98%95Layout.gif)
+![반응형Layout](https://user-images.githubusercontent.com/45018724/200210227-9bbe1119-7b90-4b6b-a6d9-df7d30b02c68.gif)
 
 반응형으로 사이드 바를 구현했습니다. useOnClickOutside 훅 사용하여, 목록 버튼으로 사이드 바 연 상태일 경우, 사이드 바 바깥 클릭하면 닫히도록 UX에 신경썼습니다. 
 
 ### 2. datePicker
-
-![datePicker.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4503f65c-8423-4adb-8077-d74812db9fe8/datePicker.gif)
+![datePicker](https://user-images.githubusercontent.com/45018724/200210254-edb354de-bb03-481d-8354-af9a3b85d4a2.gif)
 
  KPI 변화를 확인하고자 하는 기간을 설정합니다. 데이터가 존재하는 기간 동안만 영역 선택이 가능하게 해두었습니다.   
 
 ### 3. KPIGraph
-
-![graph.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/031c5086-9c47-4a57-a8e6-170b043762d6/graph.gif)
+![graph](https://user-images.githubusercontent.com/45018724/200210258-372cad1f-a1e1-48e6-af9f-a9038e9fcdad.gif)
 
 일간/주간 filter에 따라, 일간에는 선택 기간 시작일의 데이터를 보여주고, 주간 에는 선택 기간의 변화 추세를 보여줍니다.
 
@@ -32,13 +30,13 @@
 
 ## 📖 목차
 
-- [실행 방법](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#%EF%B8%8F-%EC%8B%A4%ED%96%89-%EB%B0%A9%EB%B2%95)
-- [협업 과정](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#-%ED%98%91%EC%97%85-%EA%B3%BC%EC%A0%95)
-- [Best Practice 및 채택 근거](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#%EF%B8%8F-best-practice-%EB%B0%8F-%EC%B1%84%ED%83%9D-%EA%B7%BC%EA%B1%B0)
-- [팀 코드 컨벤션](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#-%ED%8C%80-%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98)
-- [사용 기술](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#-%EC%82%AC%EC%9A%A9-%EA%B8%B0%EC%88%A0)
-- [폴더 구조](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#%ED%8F%B4%EB%8D%94-%EA%B5%AC%EC%A1%B0)
-- [팀원](notion://www.notion.so/2-2-3-madup-779d1755c57745a687ffbdfc2fadf530#-%ED%8C%80%EC%9B%90)
+- [실행 방법](-실행-방법)
+- [협업 과정](-협업-과정)
+- [Best Practice 및 채택 근거](-best-practice-및-채택-근거)
+- [팀 코드 컨벤션](-팀-코드-컨벤션)
+- [사용 기술](-사용-기술)
+- [폴더 구조](-폴더-구조)
+- [팀원](-팀원)
 
 </br>
 
