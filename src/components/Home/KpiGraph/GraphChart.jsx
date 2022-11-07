@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {
   LineChart,
   Line,
@@ -5,38 +6,70 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
-import { dateConverterToKorean } from "utils/handleFormatDate";
-import { endDateAtom, startDateAtom } from "store/date";
+
 import { useRecoilValue } from "recoil";
-import { DataFormatter } from "utils/YAxisUnitFormatter";
+
+import { dateConverterToKorean } from "utils/handleFormatDate";
 import { getDataBetweenDate } from "utils/getKPI";
+import { kpiNumberToKoreanWithUnit } from "utils/graphUnitConverter";
+
+import { endDateAtom, startDateAtom } from "store/date";
 import { trendDataQuery } from "store/trend";
-import { graphXAxisState } from "store/graphNav";
+import { graphDateRangeState, graphXAxisState } from "store/graphNav";
+
+import CustomTooltip from "./CustomToolTip";
 
 function GraphChart() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);
   const trendData = useRecoilValue(trendDataQuery);
   const navOption = useRecoilValue(graphXAxisState);
-  const { KPIdataForComparison: data } = getDataBetweenDate(trendData, startDate, endDate);
+  const dayRangeNavOption = useRecoilValue(graphDateRangeState);
 
+  const { KPIdataForComparison: data } = getDataBetweenDate(trendData, startDate, endDate);
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <LineChart data={data}>
+      <LineChart
+        width={500}
+        height={300}
+        data={dayRangeNavOption === "week" ? data : [data[0]]}
+        margin={{
+          top: 10,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+        style={{
+          fontFamily: "roboto",
+          fontWeight: "bold",
+          color: "#010101d7",
+          fontSize: ".8rem",
+        }}
+      >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="date" padding={{ left: 30, right: 30 }} />
-        <YAxis tickFormatter={data} />
-        <Tooltip />
+        <XAxis
+          tickMargin="10"
+          dataKey="date"
+          tickFormatter={(value) => dateConverterToKorean(value, "MM월 DD일")}
+        />
+        <YAxis tickFormatter={(value) => kpiNumberToKoreanWithUnit(value)} yAxisId="left" />
+        <YAxis
+          yAxisId="right"
+          orientation="right"
+          tickFormatter={(value) => kpiNumberToKoreanWithUnit(value)}
+        />
+        <Tooltip wrapperStyle={{ outline: "none" }} content={<CustomTooltip />} />
+
         <Line
+          yAxisId="left"
           type="monotone"
           dataKey={navOption.firstOption}
           stroke="#2189dc"
           activeDot={{ r: 8 }}
         />
-        <Line type="monotone" dataKey={navOption.secondOption} stroke="#34cd2b" />
+        <Line yAxisId="right" type="monotone" dataKey={navOption.secondOption} stroke="#34cd2b" />
       </LineChart>
     </ResponsiveContainer>
   );
