@@ -60,8 +60,6 @@ $ npm run start
 
 </br>
 
-# 예시
-
 ## ☑️ Best Practice 및 채택 근거
 
 ### 1. barrel 방식의 폴더구조
@@ -73,6 +71,8 @@ $ npm run start
 이는 여러개의 파일을 link로 열었을때 `index.jsx` 라는 이름이 여러개가 떠서 헷갈리는 상황을 막아줍니다.
 
 ![https://user-images.githubusercontent.com/65995664/199855960-df2b2f70-3668-4777-8c57-4bedece6d857.gif](https://user-images.githubusercontent.com/65995664/199855960-df2b2f70-3668-4777-8c57-4bedece6d857.gif)
+
+<br/>
 
 ### 2. recoil
 
@@ -137,6 +137,8 @@ return (
 	</>);
 ```
 
+<br/>
+
 ### 3. api함수를 oop 캡슐화
 
 황연욱 멘토님이 알려주신 [oop](https://github.com/walking-sunset/SoC-dependency-7th)를 이용해서 이번에 api 함수에 적용해보았습니다.
@@ -148,6 +150,7 @@ https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blo
 
 apis 폴더에 잘 정리해 두었으니 참고바랍니다. [/src/apis](https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/tree/main/src/apis)
 
+<br/>
 
 ### 4. lodash를 통한 반응형 nav
 
@@ -156,8 +159,7 @@ useOnClickOutside hook을 만들어 사용하였습니다.
 
 모바일 환경에서의 구동을 고려할 수 있습니다.
 
-
-https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blob/fa0e210fb139dee139fdf2c8212ce872ebc914a7/src/components/Layout/index.jsx#L21-37
+https://github.com/pre-onboarding-frontend-7-team-3/pre-onboarding-7th-2-2-3/blob/fa0e210fb139dee139fdf2c8212ce872ebc914a7/src/components/Layout/index.jsx#L21-L37
 
 ## 🔒 팀 코드 컨벤션
 
