@@ -10,7 +10,6 @@ import { trendDataQuery } from "store/trend";
 import { LoadingWrapper } from "components/Layout";
 import Spinner from "components/common/Spinner";
 
-//
 export default function KpiRateLists() {
   const startDate = useRecoilValue(startDateAtom);
   const endDate = useRecoilValue(endDateAtom);
@@ -42,7 +41,7 @@ export default function KpiRateLists() {
           <Imp value={kpiValues[0]?.imp} exValue={kpiValues[1]?.imp} />
           <Click value={kpiValues[0]?.click} exValue={kpiValues[1]?.click} />
           <Conv value={kpiValues[0]?.conv} exValue={kpiValues[1]?.conv} />
-          <Revenue value={kpiValues[0]?.revenue} exValue={kpiValues[0]?.revenue} />
+          <Revenue value={kpiValues[0]?.revenue} exValue={kpiValues[1]?.revenue} />
         </Container>
       )}
     </>

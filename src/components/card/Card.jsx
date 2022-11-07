@@ -11,23 +11,23 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 
 const Card = ({ cardData }) => {
-  const [toogle, setToogle] = useState(false);
-  const statusModify = toogle ? "수정 완료" : "수정 하기";
+  const [toggle, settoggle] = useState(false);
+  const statusModify = toggle ? "수정 완료" : "수정 하기";
 
-  const ModifyProps = !toogle
+  const ModifyProps = !toggle
     ? {
         onClick: () => {
-          setToogle(true);
+          settoggle(true);
         },
       }
     : {
         onClick: (e) => {
           alert("수정이 완료되었습니다");
-          setToogle(false);
+          settoggle(false);
         },
       };
 
-  const inputProps = !toogle ? { readOnly: true } : {};
+  const inputProps = !toggle ? { readOnly: true } : {};
 
   function createData(name, description) {
     if (description === "active") {
