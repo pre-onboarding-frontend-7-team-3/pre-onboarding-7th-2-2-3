@@ -1,3 +1,15 @@
+/**
+ *
+ * * 용어 정리
+ *  kpi : key performance indicator(핵심 성과 지표)
+ *  roas: ROAS
+ *  cost:광고비
+ *  imp: 노출 수
+ *  click: 클릭수
+ *  conv: 전환 수
+ *  revenue: 총매출
+ */
+
 const treatAsUTC = (date) => {
   var result = new Date(date);
   result.setMinutes(result.getMinutes() - result.getTimezoneOffset());
@@ -25,20 +37,20 @@ export const getDataBetweenDate = (data, startDate, endDate) => {
 
 export const getKPI = (trendData, startDate, endDate) => {
   const KPIs = {
-    roas: 0, //ROAS
-    cost: 0, //광고비
-    imp: 0, // 노출 수
-    click: 0, //클릭수
-    conv: 0, //전환 수
+    roas: 0,
+    cost: 0,
+    imp: 0,
+    click: 0,
+    conv: 0,
     revenue: 0,
   };
 
   const exKPIs = {
-    roas: 0, //ROAS
-    cost: 0, //광고비
-    imp: 0, // 노출 수
-    click: 0, //클릭수
-    conv: 0, //전환 수
+    roas: 0,
+    cost: 0,
+    imp: 0,
+    click: 0,
+    conv: 0,
     revenue: 0,
   };
   const { KPIdataForComparison, diffOfdate } = getDataBetweenDate(trendData, startDate, endDate);
